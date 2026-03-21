@@ -33,6 +33,7 @@
         <button class="o3"></button>
         <button class="o4"></button>
       </div>
+      <div class="next"></div>
       <div class="maru">◯</div>
       <div class="batu">×</div>
     </div>
@@ -52,6 +53,7 @@
       const o4 = document.querySelector('.o4');
       const menu = document.querySelector('.menu');
       const menuG = document.querySelector('.menuG');
+      const next = document.querySelector('.next');
       const maru = document.querySelector('.maru');
       const batu = document.querySelector('.batu');
       let question_wards = [];
@@ -73,22 +75,11 @@
       let old_range_end = range_end.value;
       let old_option_start = option_start.value;
       let old_option_end = option_end.value;
+      let next_check = 0;
       
       maru.classList.add("off");
       batu.classList.add("off");
       
-      function startquestion() {
-        question_wards = [];
-        option_wards = [];
-        question_range = Number(range_end.value) - Number(range_start.value) + 1;
-        for (let i = 0;i < question_range;i ++) {
-          question_wards[i] = wards[Number(range_start.value) + i - 1];
-        }
-        option_range = Number(option_end.value) - Number(option_start.value) + 1;
-        for (let i = 0;i < option_range;i ++) {
-          option_wards[i] = wards[Number(option_start.value) + i - 1];
-        }
-      }
       function setquestion() {
         question_number = Math.floor(Math.random() * question_wards.length);
         number.textContent = question_wards[question_number][0];
@@ -189,6 +180,21 @@
         o2.textContent = o2text;
         o3.textContent = o3text;
         o4.textContent = o4text;
+        next_check = 0;
+        question_wards.splice(question_number, 1);
+      }
+      function startquestion() {
+        question_wards = [];
+        option_wards = [];
+        question_range = Number(range_end.value) - Number(range_start.value) + 1;
+        for (let i = 0;i < question_range;i ++) {
+          question_wards[i] = wards[Number(range_start.value) + i - 1];
+        }
+        option_range = Number(option_end.value) - Number(option_start.value) + 1;
+        for (let i = 0;i < option_range;i ++) {
+          option_wards[i] = wards[Number(option_start.value) + i - 1];
+        }
+        setquestion();
       }
       menu.addEventListener('click', () => {
         menuG.classList.toggle("off");
@@ -237,6 +243,7 @@
           batu.style.top = "0px";
           batu.classList.remove("off");
         }
+        next_check = 1;
       });
       o2.addEventListener('click', () => {
         maru.classList.remove("off");
@@ -244,6 +251,7 @@
           batu.style.top = "100px";
           batu.classList.remove("off");
         }
+        next_check = 1;
       });
       o3.addEventListener('click', () => {
         maru.classList.remove("off");
@@ -251,6 +259,7 @@
           batu.style.top = "200px";
           batu.classList.remove("off");
         }
+        next_check = 1;
       });
       o4.addEventListener('click', () => {
         maru.classList.remove("off");
@@ -258,9 +267,12 @@
           batu.style.top = "300px";
           batu.classList.remove("off");
         }
+        next_check = 1;
+      });
+      next.addEventListener('click', () => {
+        setquestion();
       });
       startquestion();
-      setquestion();
     </script>
   </body>
 </html>
