@@ -85,7 +85,7 @@
       
       maru.classList.add("off");
       batu.classList.add("off");
-      miss.classList.add("off
+      miss.classList.add("off");
       
       function setquestion() {
         question_number = Math.floor(Math.random() * question_wards.length);
@@ -300,6 +300,10 @@
         o2.classList.add("notclick");
         o3.classList.add("notclick");
         o4.classList.add("notclick");
+        if (question_wards === []) {
+          next.textContent = "最初から";
+          miss.classList.remove("off");
+        }
       });
       next.addEventListener('click', () => {
         maru.classList.add("off");
@@ -307,7 +311,8 @@
         question_wards.splice(question_number, 1);
         next.classList.add("notclick");
         if (question_wards === []) {
-          next.textContent = "1周";
+          next.textContent = "次";
+          miss.classList.add("off");
         } else {
           setquestion();
         }
