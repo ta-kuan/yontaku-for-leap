@@ -177,7 +177,7 @@
         o4.textContent = o4text;
       }
       range_start.addEventListener('change', (event) => {
-        if (range_start <= 0 || range_start > wards.length) {
+        if (range_start.value <= 0 || range_start.value > wards.length) {
           range_start.value = old_range_start;
           alert("1~"+wards.lemgth+"の値にしてください");
         } else {
@@ -185,7 +185,7 @@
         }
       });
       range_end.addEventListener('change', (event) => {
-        if (range_end <= 0 || range_end > wards.length) {
+        if (range_end.value <= 0 || range_end.value > wards.length) {
           range_end.value = old_range_end;
           alert("1~"+wards.lemgth+"の値にしてください");
         } else {
@@ -193,7 +193,7 @@
         }
       });
       option_start.addEventListener('change', (event) => {
-        if (option_start <= 0 || option_start > wards.length) {
+        if (option_start.value <= 0 || option_start.value > wards.length) {
           option_start.value = old_option_start;
           alert("1~"+wards.lemgth+"の値にしてください");
         } else {
@@ -201,7 +201,7 @@
         }
       });
       option_end.addEventListener('change', (event) => {
-        if (option_end <= 0 || option_end > wards.length) {
+        if (option_end.value <= 0 || option_end.value > wards.length) {
           option_end.value = old_option_end;
           alert("1~"+wards.lemgth+"の値にしてください");
         } else {
