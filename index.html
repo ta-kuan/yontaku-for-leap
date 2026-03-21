@@ -80,7 +80,6 @@
       let old_range_end = range_end.value;
       let old_option_start = option_start.value;
       let old_option_end = option_end.value;
-      let next_check = 0;
       
       maru.classList.add("off");
       batu.classList.add("off");
@@ -185,7 +184,7 @@
         o2.textContent = o2text;
         o3.textContent = o3text;
         o4.textContent = o4text;
-        next_check = 0;
+        next.classList.add("notclick");
       }
       function startquestion() {
         question_wards = [];
@@ -251,7 +250,7 @@
           mistakes_watds[mistakes_quantity] = question_wards[question_number];
           mistakes_quantity += 1;
         }
-        next_check = 1;
+        next.classList.remove("notclick");
         o1.classList.add("notclick");
         o2.classList.add("notclick");
         o3.classList.add("notclick");
@@ -265,7 +264,7 @@
           mistakes_watds[mistakes_quantity] = question_wards[question_number];
           mistakes_quantity += 1;
         }
-        next_check = 1;
+        next.classList.remove("notclick");
         o1.classList.add("notclick");
         o2.classList.add("notclick");
         o3.classList.add("notclick");
@@ -279,7 +278,7 @@
           mistakes_watds[mistakes_quantity] = question_wards[question_number];
           mistakes_quantity += 1;
         }
-        next_check = 1;
+        next.classList.remove("notclick");
         o1.classList.add("notclick");
         o2.classList.add("notclick");
         o3.classList.add("notclick");
@@ -293,7 +292,7 @@
           mistakes_watds[mistakes_quantity] = question_wards[question_number];
           mistakes_quantity += 1;
         }
-        next_check = 1;
+        next.classList.remove("notclick");
         o1.classList.add("notclick");
         o2.classList.add("notclick");
         o3.classList.add("notclick");
@@ -303,6 +302,7 @@
         maru.classList.add("off");
         batu.classList.add("off");
         question_wards.splice(question_number, 1);
+        next.classList.add("notclick");
         if (question_wards === []) {
           next.textContent = "1周";
         } else {
