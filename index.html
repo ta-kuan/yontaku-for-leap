@@ -47,7 +47,11 @@
       const batu = document.querySelector('.batu');
       let question_wards = [];
       let option_wards = [];
+      let question_number = 0;
       let answer_number = 0;
+      let option1_number = 0;
+      let option2_number = 0;
+      let option3_number = 0;
       let question_range = 0;
       let option_range = 0;
       
@@ -61,6 +65,27 @@
           option_wards[i] = wards[option_start.value + i - 1];
         }
       }
+      function setquestion() {
+        question_number = Math.floor(Math.random() * question_wards.length);
+        number.textContent = question_wards[question_number][0];
+        mondai1.textContent = question_wards[question_number][2];
+        mondai2.textContent = question_wards[question_number][3];
+        answer_number = Math.floor(Math.random() * 4);
+        switch (answer_number) {
+          case 0:
+            o1.textContent = question_wards[question_number][1];
+            option1_number = Math.floor(Math.random() * option_wards.length);
+            break;
+          case 1:
+            o2.textContent = question_wards[question_number][1];
+            break;
+          case 2:
+            o3.textContent = question_wards[question_number][1];
+            break;
+          case 3:
+            o4.textContent = question_wards[question_number][1];
+            break;
+        }
     </script>
   </body>
 </html>
