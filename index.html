@@ -49,22 +49,54 @@
       let option_wards = [];
       let question_number = 0;
       let answer_number = 0;
-      let option1_number = 0;
-      let option2_number = 0;
-      let option3_number = 0;
+      let option_number = 0;
       let question_range = 0;
       let option_range = 0;
+      let o1text = "";
+      let o2text = "";
+      let o3text = "";
+      let o4text = "";
       
       function startquestion() {
         question_wards = [];
         option_wards = [];
-        question_range = ramge_end.value - range_start.value + 1;
+        question_range = Number(ramge_end.value) - Number(range_start.value) + 1;
         for (let i = 0;i <= question_range;i ++) {
-          question_wards[i] = wards[range_start.value + i - 1];
+          question_wards[i] = wards[Number(range_start.value) + i - 1];
         }
-        option_range = option_end.value - option_start.value + 1;
+        option_range = Number(option_end.value) - Number(option_start.value) + 1;
         for (let i = 0;i <= option_range;i ++) {
-          option_wards[i] = wards[option_start.value + i - 1];
+          option_wards[i] = wards[Number(option_start.value) + i - 1];
+        }
+      }
+      function setoption(o) {
+        option_number = Math.floor(Math.random() * option_wards.length);
+        o = question_wards[option_number][1];
+        switch (o) {
+          case o1text:
+            for (o2text === o && o3text === o && o4text === o) {
+              option_number = Math.floor(Math.random() * option_wards.length);
+              o = question_wards[option_number][1];
+            }
+            break;
+          case o2text:
+            for (o1text === o && o3text === o && o4text === o) {
+              option_number = Math.floor(Math.random() * option_wards.length);
+              o = question_wards[option_number][1];
+            }
+            break;
+          case o3text:
+            for (o1text === o && o2text === o && o4text === o) {
+              option_number = Math.floor(Math.random() * option_wards.length);
+              o = question_wards[option_number][1];
+            }
+            break;
+          case o4text:
+            for (o1text === o && o2text === o && o3text === o) {
+              option_number = Math.floor(Math.random() * option_wards.length);
+              o = question_wards[option_number][1];
+            }
+            break;
         }
       }
       function setquestion() {
@@ -75,20 +107,37 @@
         answer_number = Math.floor(Math.random() * 4);
         switch (answer_number) {
           case 0:
-            o1.textContent = question_wards[question_number][1];
-            option1_number = Math.floor(Math.random() * option_wards.length);
+            o1text = question_wards[question_number][1];
+            setoption(o2text);
+            setoption(o3text);
+            setoption(o4text);
             break;
           case 1:
-            o2.textContent = question_wards[question_number][1];
+            o2text = question_wards[question_number][1];
+            setoption(o1text);
+            setoption(o3text);
+            setoption(o4text);
             break;
           case 2:
-            o3.textContent = question_wards[question_number][1];
+            o3text = question_wards[question_number][1];
+            setoption(o1text);
+            setoption(o2text);
+            setoption(o4text);
             break;
           case 3:
-            o4.textContent = question_wards[question_number][1];
+            o4text = question_wards[question_number][1];
+            setoption(o1text);
+            setoption(o2text);
+            setoption(o3text);
             break;
         }
+        o1.textContent = o1text;
+        o2.textContent = o2text;
+        o3.textContent = o3text;
+        o4.textContent = o4text;
       }
+      startquestion();
+      setquestion();
     </script>
   </body>
 </html>
