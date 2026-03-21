@@ -270,6 +270,8 @@
         next_check = 1;
       });
       next.addEventListener('click', () => {
+        maru.classList.add("off");
+        batu.classList.add("off");
         setquestion();
       });
       startquestion();
