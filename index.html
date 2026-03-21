@@ -46,6 +46,19 @@
       let question_wards = [];
       let option_wards = [];
       let answer_number = 0;
+      let question_range = 0;
+      let option_range = 0;
+      
+      function startquestion() {
+        question_range = ramge_end.value - range_start.value + 1;
+        for (let i = 0;i <= question_range.value;i ++) {
+          question_wards[i] = wards[range_start.value + i - 1];
+        }
+        option_range = option_end.value - option_start.value + 1;
+        for (let i = 0;i <= option_range.value;i ++) {
+          option_wards[i] = wards[option_start.value + i - 1];
+        }
+      }
     </script>
   </body>
 </html>
