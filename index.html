@@ -270,9 +270,11 @@
         next_check = 1;
       });
       next.addEventListener('click', () => {
-        maru.classList.add("off");
-        batu.classList.add("off");
-        setquestion();
+        if (next_check === 1) {
+          maru.classList.add("off");
+          batu.classList.add("off");
+          setquestion();
+        }
       });
       startquestion();
     </script>
