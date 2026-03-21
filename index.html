@@ -6,6 +6,9 @@
     <title>4択 For-LEAP</title>
     <link rel="icon" href="tubicon.png">
     <style>
+      .off {
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -176,6 +179,9 @@
         o3.textContent = o3text;
         o4.textContent = o4text;
       }
+      menu.addEventListener('click', () => {
+        menuG.classList.toggle(.off);
+      });
       range_start.addEventListener('change', (event) => {
         if (range_start.value <= 0 || range_start.value > wards.length) {
           range_start.value = old_range_start;
