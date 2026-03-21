@@ -74,11 +74,11 @@
         question_wards = [];
         option_wards = [];
         question_range = Number(range_end.value) - Number(range_start.value) + 1;
-        for (let i = 0;i <= question_range;i ++) {
+        for (let i = 0;i < question_range;i ++) {
           question_wards[i] = wards[Number(range_start.value) + i - 1];
         }
         option_range = Number(option_end.value) - Number(option_start.value) + 1;
-        for (let i = 0;i <= option_range;i ++) {
+        for (let i = 0;i < option_range;i ++) {
           option_wards[i] = wards[Number(option_start.value) + i - 1];
         }
       }
