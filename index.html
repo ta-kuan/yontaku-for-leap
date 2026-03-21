@@ -61,6 +61,11 @@
       range_end.value = 5;
       option_start.value = 1;
       option_end.value = 5;
+      let old_range_start = range_start.value;
+      let old_range_end = range_end.value;
+      let old_option_start = option_start.value;
+      let old_option_end = option_end.value;
+      
       
       function startquestion() {
         question_wards = [];
@@ -171,6 +176,38 @@
         o3.textContent = o3text;
         o4.textContent = o4text;
       }
+      range_start.addEventListener('change', (event) => {
+        if (range_start <= 0 || range_start > wards.length) {
+          range_start.value = old_range_start;
+          alert("1~"+wards.lemgth+"の値にしてください");
+        else {
+          old_range_start = range_start.value;
+        }
+      });
+      range_end.addEventListener('change', (event) => {
+        if (range_end <= 0 || range_end > wards.length) {
+          range_end.value = old_range_end;
+          alert("1~"+wards.lemgth+"の値にしてください");
+        else {
+          old_range_end = range_end.value;
+        }
+      });
+      option_start.addEventListener('change', (event) => {
+        if (option_start <= 0 || option_start > wards.length) {
+          option_start.value = old_option_start;
+          alert("1~"+wards.lemgth+"の値にしてください");
+        else {
+          old_option_start = option_start.value;
+        }
+      });
+      option_end.addEventListener('change', (event) => {
+        if (option_end <= 0 || option_end > wards.length) {
+          option_end.value = old_option_end;
+          alert("1~"+wards.lemgth+"の値にしてください");
+        else {
+          old_option_end = option_end.value;
+        }
+      });
       startquestion();
       setquestion();
     </script>
