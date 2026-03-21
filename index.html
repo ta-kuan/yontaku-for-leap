@@ -58,6 +58,8 @@
       const batu = document.querySelector('.batu');
       let question_wards = [];
       let option_wards = [];
+      let mistakes_wards = [];
+      let mistakes_quantity = 0;
       let question_number = 0;
       let answer_number = 0;
       let option_number = 0;
@@ -181,7 +183,6 @@
         o3.textContent = o3text;
         o4.textContent = o4text;
         next_check = 0;
-        question_wards.splice(question_number, 1);
       }
       function startquestion() {
         question_wards = [];
@@ -194,6 +195,8 @@
         for (let i = 0;i < option_range;i ++) {
           option_wards[i] = wards[Number(option_start.value) + i - 1];
         }
+        mistakes_wards = [];
+        mistakes_quantity = 0;
         setquestion();
       }
       menu.addEventListener('click', () => {
@@ -242,6 +245,8 @@
         if (answer_number !== 0) {
           batu.style.top = "0px";
           batu.classList.remove("off");
+          mistakes_watds[mistakes_quantity] = question_wards[question_number];
+          mistakes_quantity += 1;
         }
         next_check = 1;
       });
@@ -250,6 +255,8 @@
         if (answer_number !== 1) {
           batu.style.top = "100px";
           batu.classList.remove("off");
+          mistakes_watds[mistakes_quantity] = question_wards[question_number];
+          mistakes_quantity += 1;
         }
         next_check = 1;
       });
@@ -258,6 +265,8 @@
         if (answer_number !== 2) {
           batu.style.top = "200px";
           batu.classList.remove("off");
+          mistakes_watds[mistakes_quantity] = question_wards[question_number];
+          mistakes_quantity += 1;
         }
         next_check = 1;
       });
@@ -266,6 +275,8 @@
         if (answer_number !== 3) {
           batu.style.top = "300px";
           batu.classList.remove("off");
+          mistakes_watds[mistakes_quantity] = question_wards[question_number];
+          mistakes_quantity += 1;
         }
         next_check = 1;
       });
@@ -273,7 +284,12 @@
         if (next_check === 1) {
           maru.classList.add("off");
           batu.classList.add("off");
-          setquestion();
+          question_wards.splice(question_number, 1);
+          if (question_wards === []) {
+            next.textContent = "1周";
+          } else {
+            setquestion();
+          }
         }
       });
       startquestion();
