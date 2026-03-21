@@ -56,6 +56,7 @@
       let o2text = "";
       let o3text = "";
       let o4text = "";
+      let op = "";
       range_start.value = 1;
       range_end.value = 5;
       option_start.value = 1;
@@ -75,30 +76,30 @@
       }
       function setoption(o) {
         option_number = Math.floor(Math.random() * option_wards.length);
-        o = question_wards[option_number][1];
+        op = question_wards[option_number][1];
         switch (o) {
           case o1text:
-            while (o2text === o && o3text === o && o4text === o) {
+            while (o2text === op && o3text === op && o4text === op) {
               option_number = Math.floor(Math.random() * option_wards.length);
-              o = option_wards[option_number][1];
+              op = option_wards[option_number][1];
             }
             break;
           case o2text:
-            while (o1text === o && o3text === o && o4text === o) {
+            while (o1text === op && o3text === op && o4text === op) {
               option_number = Math.floor(Math.random() * option_wards.length);
-              o = option_wards[option_number][1];
+              op = option_wards[option_number][1];
             }
             break;
           case o3text:
-            while (o1text === o && o2text === o && o4text === o) {
+            while (o1text === op && o2text === op && o4text === op) {
               option_number = Math.floor(Math.random() * option_wards.length);
-              o = option_wards[option_number][1];
+              op = option_wards[option_number][1];
             }
             break;
           case o4text:
-            while (o1text === o && o2text === o && o3text === o) {
+            while (o1text === op && o2text === op && o3text === op) {
               option_number = Math.floor(Math.random() * option_wards.length);
-              o = option_wards[option_number][1];
+              op = option_wards[option_number][1];
             }
             break;
         }
@@ -113,26 +114,38 @@
           case 0:
             o1text = question_wards[question_number][1];
             setoption(o2text);
+            o2text = op;
             setoption(o3text);
+            o3text = op;
             setoption(o4text);
+            o4text = op;
             break;
           case 1:
             o2text = question_wards[question_number][1];
             setoption(o1text);
+            o1text = op;
             setoption(o3text);
+            o3text = op;
             setoption(o4text);
+            o4text = op;
             break;
           case 2:
             o3text = question_wards[question_number][1];
             setoption(o1text);
+            o1text = op;
             setoption(o2text);
+            o2text = op;
             setoption(o4text);
+            o4text = op;
             break;
           case 3:
             o4text = question_wards[question_number][1];
             setoption(o1text);
+            o1text = op;
             setoption(o2text);
+            o2text = op;
             setoption(o3text);
+            o3text = op;
             break;
         }
         o1.textContent = o1text;
