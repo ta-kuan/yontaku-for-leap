@@ -109,6 +109,7 @@
               option_number = Math.floor(Math.random() * option_wards.length);
               o4text = option_wards[option_number][1];
             }
+            maru.style.top = "0px";
             break;
           case 1:
             o2text = question_wards[question_number][1];
@@ -130,6 +131,7 @@
               option_number = Math.floor(Math.random() * option_wards.length);
               o4text = option_wards[option_number][1];
             }
+            maru.style.top = "100px";
             break;
           case 2:
             o3text = question_wards[question_number][1];
@@ -151,6 +153,7 @@
               option_number = Math.floor(Math.random() * option_wards.length);
               o4text = option_wards[option_number][1];
             }
+            maru.style.top = "200px";
             break;
           case 3:
             o4text = question_wards[question_number][1];
@@ -172,6 +175,7 @@
               option_number = Math.floor(Math.random() * option_wards.length);
               o3text = option_wards[option_number][1];
             }
+            maru.style.top = "300px";
             break;
         }
         o1.textContent = o1text;
@@ -217,28 +221,28 @@
       o1.addEventListener('click', () => {
         maru.classist.remove("off");
         if (answer_number !== 0) {
-          batu.style.top = "";
+          batu.style.top = "0px";
           batu.classist.remove("off");
         }
       });
       o2.addEventListener('click', () => {
         maru.classist.remove("off");
         if (answer_number !== 1) {
-          batu.style.top = "";
+          batu.style.top = "100px";
           batu.classist.remove("off");
         }
       });
       o3.addEventListener('click', () => {
         maru.classist.remove("off");
         if (answer_number !== 2) {
-          batu.style.top = "";
+          batu.style.top = "200px";
           batu.classist.remove("off");
         }
       });
       o4.addEventListener('click', () => {
         maru.classist.remove("off");
         if (answer_number !== 3) {
-          batu.style.top = "";
+          batu.style.top = "300px";
           batu.classist.remove("off");
         }
       });
