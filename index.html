@@ -300,20 +300,17 @@
         o2.classList.add("notclick");
         o3.classList.add("notclick");
         o4.classList.add("notclick");
-        if (question_wards === []) {
-          next.textContent = "最初から";
-          miss.classList.remove("off");
-        }
       });
       next.addEventListener('click', () => {
         maru.classList.add("off");
         batu.classList.add("off");
         question_wards.splice(question_number, 1);
-        next.classList.add("notclick");
         if (question_wards === []) {
-          next.textContent = "次";
-          miss.classList.add("off");
+          next.textContent = "最初から";
+          miss.classList.remove("off");
+          next.classList.remove("notclick");
         } else {
+          next.classList.add("notclick");
           o1.classList.remove("notclick");
           o2.classList.remove("notclick");
           o3.classList.remove("notclick");
