@@ -95,7 +95,8 @@
       let old_range_end = range_end.value;
       let old_option_start = option_start.value;
       let old_option_end = option_end.value;
-      let change_number = 1;
+      let change_number = 2;
+      let changeq_number = 1;
       
       menuG.classList.remove("off");
       maru.classList.add("off");
@@ -351,9 +352,11 @@
         change.classList.toggle("switch1");
         changem.classList.toggle("switch1");
         if (change.classList.contains("switch1")) {
-          change_number = 2;
-        } else {
           change_number = 1;
+          changeq_number = 2;
+        } else {
+          change_number = 2;
+          changeq_number = 1;
         }
       });
       startquestion();
