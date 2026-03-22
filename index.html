@@ -347,6 +347,7 @@
         miss.classList.add("off");
         question_wards = mistakes_wards;
         next.textContent = "次";
+        startquestion();
       });
       change.addEventListener('click', () => {
         change.classList.toggle("switch1");
@@ -358,6 +359,7 @@
           change_number = 2;
           changeq_number = 1;
         }
+        setquestion();
       });
       startquestion();
     </script>
