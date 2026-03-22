@@ -82,7 +82,6 @@
       let old_range_end = range_end.value;
       let old_option_start = option_start.value;
       let old_option_end = option_end.value;
-      let o_check = 0;
       
       maru.classList.add("off");
       batu.classList.add("off");
@@ -247,75 +246,62 @@
         }
       });
       o1.addEventListener('click', () => {
-        if (o_check === 0) {
-          o_check = 1;
-          maru.classList.remove("off");
-          if (answer_number !== 0) {
-            batu.style.top = "0px";
-            batu.classList.remove("off");
-            mistakes_watds[mistakes_quantity] = question_wards[question_number];
-            mistakes_quantity += 1;
-          }
-          next.classList.remove("notclick");
-          o1.classList.add("notclick");
-          o2.classList.add("notclick");
-          o3.classList.add("notclick");
-          o4.classList.add("notclick");
+        maru.classList.remove("off");
+        if (answer_number !== 0) {
+          batu.style.top = "0px";
+          batu.classList.remove("off");
+          mistakes_wards[mistakes_quantity] = question_wards[question_number];
+          mistakes_quantity += 1;
         }
+        next.classList.remove("notclick");
+        o1.classList.add("notclick");
+        o2.classList.add("notclick");
+        o3.classList.add("notclick");
+        o4.classList.add("notclick");
       });
       o2.addEventListener('click', () => {
-        if (o_check === 0) {
-          o_check = 1;
-          maru.classList.remove("off");
-          if (answer_number !== 1) {
-            batu.style.top = "100px";
-            batu.classList.remove("off");
-            mistakes_watds[mistakes_quantity] = question_wards[question_number];
-            mistakes_quantity += 1;
-          }
-          next.classList.remove("notclick");
-          o1.classList.add("notclick");
-          o2.classList.add("notclick");
-          o3.classList.add("notclick");
-          o4.classList.add("notclick");
+        maru.classList.remove("off");
+        if (answer_number !== 1) {
+          batu.style.top = "100px";
+          batu.classList.remove("off");
+          mistakes_wards[mistakes_quantity] = question_wards[question_number];
+          mistakes_quantity += 1;
         }
+        next.classList.remove("notclick");
+        o1.classList.add("notclick");
+        o2.classList.add("notclick");
+        o3.classList.add("notclick");
+        o4.classList.add("notclick");
       });
       o3.addEventListener('click', () => {
-        if (o_check === 0) {
-          o_check = 1;
-          maru.classList.remove("off");
-          if (answer_number !== 2) {
-            batu.style.top = "200px";
-            batu.classList.remove("off");
-            mistakes_watds[mistakes_quantity] = question_wards[question_number];
-            mistakes_quantity += 1;
-          }
-          next.classList.remove("notclick");
-          o1.classList.add("notclick");
-          o2.classList.add("notclick");
-          o3.classList.add("notclick");
-          o4.classList.add("notclick");
+        maru.classList.remove("off");
+        if (answer_number !== 2) {
+          batu.style.top = "200px";
+          batu.classList.remove("off");
+          mistakes_wards[mistakes_quantity] = question_wards[question_number];
+          mistakes_quantity += 1;
         }
+        next.classList.remove("notclick");
+        o1.classList.add("notclick");
+        o2.classList.add("notclick");
+        o3.classList.add("notclick");
+        o4.classList.add("notclick");
       });
       o4.addEventListener('click', () => {
-        if (o_check === 0) {
-          o_check = 1;
-          maru.classList.remove("off");
-          if (answer_number !== 3) {
-            batu.style.top = "300px";
-            batu.classList.remove("off");
-            mistakes_watds[mistakes_quantity] = question_wards[question_number];
-            mistakes_quantity += 1;
-          }
-          next.classList.remove("notclick");
-          o1.classList.add("notclick");
-          o2.classList.add("notclick");
-          o3.classList.add("notclick");
-          o4.classList.add("notclick");
+        maru.classList.remove("off");
+        if (answer_number !== 3) {
+          batu.style.top = "300px";
+          batu.classList.remove("off");
+          mistakes_wards[mistakes_quantity] = question_wards[question_number];
+          mistakes_quantity += 1;
         }
+        next.classList.remove("notclick");
+        o1.classList.add("notclick");
+        o2.classList.add("notclick");
+        o3.classList.add("notclick");
+        o4.classList.add("notclick");
       });
       next.addEventListener('click', () => {
-        o_check = 0;
         maru.classList.add("off");
         batu.classList.add("off");
         question_wards.splice(question_number, 1);
