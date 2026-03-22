@@ -65,6 +65,7 @@
       const maru = document.querySelector('.maru');
       const batu = document.querySelector('.batu');
       const change = document.querySelector('.change');
+      const changem = document.querySelector('.changem');
       let question_wards = [];
       let option_wards = [];
       let mistakes_wards = [];
@@ -86,6 +87,7 @@
       let old_range_end = range_end.value;
       let old_option_start = option_start.value;
       let old_option_end = option_end.value;
+      let change_number = 1;
       
       menuG.classList.remove("off");
       maru.classList.add("off");
@@ -331,6 +333,15 @@
         miss.classList.add("off");
         question_wards = mistakes_wards;
         next.textContent = "次";
+      });
+      change.addEventListener('click', () => {
+        if (change.classList.contains("swich1") {
+          change_number = 2;
+        } else {
+          change_number = 1;
+        }
+        change.classList.toggle("swich1");
+        change.classList.toggle("swich1");
       });
       startquestion();
     </script>
