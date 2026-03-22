@@ -115,7 +115,7 @@
   <body>
     <div class="all">
       <button class="menu"></button>
-      <div class="menuG">
+      <div class="menuG off">
         <input type="number" class="range_start">
         <input type="number" class="range_end">
         <input type="number" class="option_start">
@@ -135,10 +135,10 @@
         <button class="o4"></button>
         <div class="buttons">
           <button class="next">次へ</button>
-          <button class="miss">間違えた問題ををやり直す</button>
+          <button class="miss off">間違えた問題ををやり直す</button>
         </div>
-        <div class="maru">◯</div>
-        <div class="batu">×</div>
+        <div class="maru off">◯</div>
+        <div class="batu off">×</div>
       </div>
     </div>
     <script src="wards.js"></script>
@@ -185,12 +185,6 @@
       let old_option_start = option_start.value;
       let old_option_end = option_end.value;
       let change_number = 1;
-      
-      menuG.classList.add("off");
-      maru.classList.add("off");
-      batu.classList.add("off");
-      miss.classList.add("off");
-      
       
       function setquestion() {
         question_number = Math.floor(Math.random() * question_wards.length);
