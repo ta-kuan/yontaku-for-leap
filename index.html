@@ -318,6 +318,10 @@
           setquestion();
         }
       });
+      miss.addEventListener('click', () => {
+        miss.classList.add("off");
+        question_wards = mistakes_wards;
+      });
       startquestion();
     </script>
   </body>
