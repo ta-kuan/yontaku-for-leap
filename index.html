@@ -416,14 +416,18 @@
         if (question_wards.length === 0) {
           next.textContent = "最初から";
           miss.classList.remove("off");
-          next.classList.remove("notclick");
+          next.classList.remove("notclick"); 
         } else {
           next.classList.add("notclick");
           o1.classList.remove("notclick");
           o2.classList.remove("notclick");
           o3.classList.remove("notclick");
           o4.classList.remove("notclick");
-          setquestion();
+          if (next.textContent === "最初から") {
+            startquestion();
+          } else {
+            setquestion();
+          }
         }
       });
       miss.addEventListener('click', () => {
