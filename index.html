@@ -415,7 +415,7 @@
         question_wards.splice(question_number, 1);
         if (question_wards.length === 0) {
           next.textContent = "最初から";
-          miss.classList.remove("off");
+          if (mistakes_wards.length === 0) miss.classList.remove("off");
           next.classList.remove("notclick"); 
         } else {
           next.classList.add("notclick");
