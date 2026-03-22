@@ -214,6 +214,7 @@
           alert("1~"+wards.length+"の値にしてください");
         } else {
           old_range_start = range_start.value;
+          setquestion();
         }
       });
       range_end.addEventListener('change', (event) => {
@@ -222,6 +223,7 @@
           alert("1~"+wards.length+"の値にしてください");
         } else {
           old_range_end = range_end.value;
+          setquestion();
         }
       });
       option_start.addEventListener('change', (event) => {
@@ -233,6 +235,7 @@
           alert("選択肢範囲は3つ以上にしてください");
         } else {
           old_option_start = option_start.value;
+          setquestion();
         }
       });
       option_end.addEventListener('change', (event) => {
@@ -244,6 +247,7 @@
           alert("選択肢範囲は3つ以上にしてください");
         } else {
           old_option_end = option_end.value;
+          setquestion();
         }
       });
       o1.addEventListener('click', () => {
