@@ -95,8 +95,7 @@
       let old_range_end = range_end.value;
       let old_option_start = option_start.value;
       let old_option_end = option_end.value;
-      let change_number = 2;
-      let changeq_number = 1;
+      let change_number = 1;
       
       menuG.classList.remove("off");
       maru.classList.add("off");
@@ -116,7 +115,7 @@
         answer_number = Math.floor(Math.random() * 4);
         switch (answer_number) {
           case 0:
-            o1text = question_wards[question_number][changeq_number];
+            o1text = question_wards[question_number][change_number];
             option_number = Math.floor(Math.random() * option_wards.length);
             o2text = option_wards[option_number][change_number];
             while (o2text === o1text) {
@@ -138,7 +137,7 @@
             maru.style.top = "0px";
             break;
           case 1:
-            o2text = question_wards[question_number][changeq_number];
+            o2text = question_wards[question_number][change_number];
             option_number = Math.floor(Math.random() * option_wards.length);
             o1text = option_wards[option_number][change_number];
             while (o1text === o2text) {
@@ -160,7 +159,7 @@
             maru.style.top = "100px";
             break;
           case 2:
-            o3text = question_wards[question_number][changeq_number];
+            o3text = question_wards[question_number][change_number];
             option_number = Math.floor(Math.random() * option_wards.length);
             o1text = option_wards[option_number][change_number];
             while (o1text === o3text) {
@@ -182,7 +181,7 @@
             maru.style.top = "200px";
             break;
           case 3:
-            o4text = question_wards[question_number][changeq_number];
+            o4text = question_wards[question_number][change_number];
             option_number = Math.floor(Math.random() * option_wards.length);
             o1text = option_wards[option_number][change_number];
             while (o1text === o4text) {
@@ -353,11 +352,9 @@
         change.classList.toggle("switch1");
         changem.classList.toggle("switch1");
         if (change.classList.contains("switch1")) {
-          change_number = 1;
-          changeq_number = 2;
-        } else {
           change_number = 2;
-          changeq_number = 1;
+        } else {
+          change_number = 1;
         }
         setquestion();
       });
