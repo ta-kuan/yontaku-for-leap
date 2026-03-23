@@ -179,7 +179,15 @@
       const next = document.querySelector('.next');
       const miss = document.querySelector('.miss');
       const maru = document.querySelector('.maru');
+      const m1 = document.querySelector('.m1');
+      const m2 = document.querySelector('.m2');
+      const m3 = document.querySelector('.m3');
+      const m4 = document.querySelector('.m4');
       const batu = document.querySelector('.batu');
+      const b1 = document.querySelector('.b1');
+      const b2 = document.querySelector('.b2');
+      const b3 = document.querySelector('.b3');
+      const b4 = document.querySelector('.b4');
       const change = document.querySelector('.change');
       const changem = document.querySelector('.changem');
       let question_wards = [];
@@ -237,7 +245,7 @@
               option_number = Math.floor(Math.random() * option_wards.length);
               o4text = option_wards[option_number][change_number];
             }
-            maru.style.top = "1vh";
+            m1.classList.remove("off");
             break;
           case 1:
             o2text = question_wards[question_number][change_number];
@@ -259,7 +267,7 @@
               option_number = Math.floor(Math.random() * option_wards.length);
               o4text = option_wards[option_number][change_number];
             }
-            maru.style.top = "15vh";
+            m2.classList.remove("off");
             break;
           case 2:
             o3text = question_wards[question_number][change_number];
@@ -281,7 +289,7 @@
               option_number = Math.floor(Math.random() * option_wards.length);
               o4text = option_wards[option_number][change_number];
             }
-            maru.style.top = "29.5vh";
+            m3.classList.remove("off");
             break;
           case 3:
             o4text = question_wards[question_number][change_number];
@@ -303,7 +311,7 @@
               option_number = Math.floor(Math.random() * option_wards.length);
               o3text = option_wards[option_number][change_number];
             }
-            maru.style.top = "43vh";
+            m4.classList.remove("off");
             break;
         }
         o1.textContent = o1text;
