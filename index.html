@@ -141,17 +141,17 @@
       <div class="mondai2"></div>
       <div class="options">
         <button class="o1" id="o1i"></button>
-        <label for="o1i" class="maru m1 off">◯</label>
-        <label for="o1i" class="batu b1 off">×</label>
+        <label for="o1i" class="m1 off">◯</label>
+        <label for="o1i" class="b1 off">×</label>
         <button class="o2" id="o2i"></button>
-        <label for="o2i" class="maru m2 off">◯</label>
-        <label for="o2i" class="batu b2 off">×</label>
+        <label for="o2i" class="m2 off">◯</label>
+        <label for="o2i" class="b2 off">×</label>
         <button class="o3" id="o3i"></button>
-        <label for="o3i" class="maru m3 off">◯</label>
-        <label for="o3i" class="batu b3 off">×</label>
+        <label for="o3i" class="m3 off">◯</label>
+        <label for="o3i" class="b3 off">×</label>
         <button class="o4" id="o4i"></button>
-        <label for="o4i" class="maru m4 off">◯</label>
-        <label for="o4i" class="batu b4 off">×</label>
+        <label for="o4i" class="m4 off">◯</label>
+        <label for="o4i" class="b4 off">×</label>
         <div class="buttons">
           <button class="next">次へ</button>
           <button class="miss off">間違えた問題を やり直す</button>
@@ -176,12 +176,10 @@
       const menuG = document.querySelector('.menuG');
       const next = document.querySelector('.next');
       const miss = document.querySelector('.miss');
-      const maru = document.querySelector('.maru');
       const m1 = document.querySelector('.m1');
       const m2 = document.querySelector('.m2');
       const m3 = document.querySelector('.m3');
       const m4 = document.querySelector('.m4');
-      const batu = document.querySelector('.batu');
       const b1 = document.querySelector('.b1');
       const b2 = document.querySelector('.b2');
       const b3 = document.querySelector('.b3');
@@ -448,8 +446,14 @@
         o4.classList.add("notclick");
       });
       next.addEventListener('click', () => {
-        maru.classList.add("off");
-        batu.classList.add("off");
+        m1.classList.add("off");
+        b1.classList.add("off");
+        m2.classList.add("off");
+        b2.classList.add("off");
+        m3.classList.add("off");
+        b3.classList.add("off");
+        m4.classList.add("off");
+        b4.classList.add("off");
         question_wards.splice(question_number, 1);
         if (question_wards.length === 0) {
           next.textContent = "最初から";
