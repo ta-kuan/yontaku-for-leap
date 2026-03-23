@@ -212,6 +212,7 @@
       let old_option_start = option_start.value;
       let old_option_end = option_end.value;
       let change_number = 1;
+      let m = 0;
       
       function setquestion() {
         question_number = Math.floor(Math.random() * question_wards.length);
@@ -245,7 +246,7 @@
               option_number = Math.floor(Math.random() * option_wards.length);
               o4text = option_wards[option_number][change_number];
             }
-            m1.classList.remove("off");
+            m = 1;
             break;
           case 1:
             o2text = question_wards[question_number][change_number];
@@ -267,7 +268,7 @@
               option_number = Math.floor(Math.random() * option_wards.length);
               o4text = option_wards[option_number][change_number];
             }
-            m2.classList.remove("off");
+            m = 2;
             break;
           case 2:
             o3text = question_wards[question_number][change_number];
@@ -289,7 +290,7 @@
               option_number = Math.floor(Math.random() * option_wards.length);
               o4text = option_wards[option_number][change_number];
             }
-            m3.classList.remove("off");
+            m = 3;
             break;
           case 3:
             o4text = question_wards[question_number][change_number];
@@ -311,7 +312,7 @@
               option_number = Math.floor(Math.random() * option_wards.length);
               o3text = option_wards[option_number][change_number];
             }
-            m4.classList.remove("off");
+            m = 4;
             break;
         }
         o1.textContent = o1text;
@@ -334,6 +335,22 @@
         mistakes_wards = [];
         mistakes_quantity = 0;
         setquestion();
+      }
+      function setmaru() {
+        switch(m) {
+          case 1:
+            m1.classList.remove("off");
+            break;
+          case 2:
+            m2.classList.remove("off");
+            break;
+          case 3:
+            m3.classList.remove("off");
+            break;
+          case 4:
+            m4.classList.remove("off");
+            break;
+        }
       }
       menu.addEventListener('click', () => {
         menuG.classList.toggle("off");
@@ -381,10 +398,9 @@
         }
       });
       o1.addEventListener('click', () => {
-        maru.classList.remove("off");
+        setmaru();
         if (answer_number !== 0) {
-          batu.style.top = "1vh";
-          batu.classList.remove("off");
+          b1.classList.remove("off");
           mistakes_wards[mistakes_quantity] = question_wards[question_number];
           mistakes_quantity += 1;
         }
@@ -395,10 +411,9 @@
         o4.classList.add("notclick");
       });
       o2.addEventListener('click', () => {
-        maru.classList.remove("off");
+        setmaru();
         if (answer_number !== 1) {
-          batu.style.top = "15vh";
-          batu.classList.remove("off");
+          b2.classList.remove("off");
           mistakes_wards[mistakes_quantity] = question_wards[question_number];
           mistakes_quantity += 1;
         }
@@ -409,10 +424,9 @@
         o4.classList.add("notclick");
       });
       o3.addEventListener('click', () => {
-        maru.classList.remove("off");
+        setmaru();
         if (answer_number !== 2) {
-          batu.style.top = "29.5vh";
-          batu.classList.remove("off");
+          b3.classList.remove("off");
           mistakes_wards[mistakes_quantity] = question_wards[question_number];
           mistakes_quantity += 1;
         }
@@ -423,10 +437,9 @@
         o4.classList.add("notclick");
       });
       o4.addEventListener('click', () => {
-        maru.classList.remove("off");
+        setmaru();
         if (answer_number !== 3) {
-          batu.style.top = "43vh";
-          batu.classList.remove("off");
+          b4.classList.remove("off");
           mistakes_wards[mistakes_quantity] = question_wards[question_number];
           mistakes_quantity += 1;
         }
