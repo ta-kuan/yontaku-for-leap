@@ -227,7 +227,7 @@
               option_number = Math.floor(Math.random() * option_wards.length);
               o4text = option_wards[option_number][change_number];
             }
-            maru.style.top = "3vh";
+            maru.style.top = "1vh";
             break;
           case 1:
             o2text = question_wards[question_number][change_number];
@@ -249,7 +249,7 @@
               option_number = Math.floor(Math.random() * option_wards.length);
               o4text = option_wards[option_number][change_number];
             }
-            maru.style.top = "17vh";
+            maru.style.top = "15vh";
             break;
           case 2:
             o3text = question_wards[question_number][change_number];
@@ -271,7 +271,7 @@
               option_number = Math.floor(Math.random() * option_wards.length);
               o4text = option_wards[option_number][change_number];
             }
-            maru.style.top = "31.5vh";
+            maru.style.top = "29.5vh";
             break;
           case 3:
             o4text = question_wards[question_number][change_number];
@@ -293,7 +293,7 @@
               option_number = Math.floor(Math.random() * option_wards.length);
               o3text = option_wards[option_number][change_number];
             }
-            maru.style.top = "45vh";
+            maru.style.top = "43vh";
             break;
         }
         o1.textContent = o1text;
@@ -365,7 +365,7 @@
       o1.addEventListener('click', () => {
         maru.classList.remove("off");
         if (answer_number !== 0) {
-          batu.style.top = "3vh";
+          batu.style.top = "1vh";
           batu.classList.remove("off");
           mistakes_wards[mistakes_quantity] = question_wards[question_number];
           mistakes_quantity += 1;
@@ -379,7 +379,7 @@
       o2.addEventListener('click', () => {
         maru.classList.remove("off");
         if (answer_number !== 1) {
-          batu.style.top = "17vh";
+          batu.style.top = "15vh";
           batu.classList.remove("off");
           mistakes_wards[mistakes_quantity] = question_wards[question_number];
           mistakes_quantity += 1;
@@ -393,7 +393,7 @@
       o3.addEventListener('click', () => {
         maru.classList.remove("off");
         if (answer_number !== 2) {
-          batu.style.top = "31.5vh";
+          batu.style.top = "29.5vh";
           batu.classList.remove("off");
           mistakes_wards[mistakes_quantity] = question_wards[question_number];
           mistakes_quantity += 1;
@@ -407,7 +407,7 @@
       o4.addEventListener('click', () => {
         maru.classList.remove("off");
         if (answer_number !== 3) {
-          batu.style.top = "45vh";
+          batu.style.top = "43vh";
           batu.classList.remove("off");
           mistakes_wards[mistakes_quantity] = question_wards[question_number];
           mistakes_quantity += 1;
