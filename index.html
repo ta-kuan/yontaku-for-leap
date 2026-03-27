@@ -185,7 +185,7 @@
           <button class="miss off">間違えた問題を やり直す</button>
         </div>
       </div>
-      <div class="resultG">
+      <div class="resultG off">
         <span class="rate">50%</span>
       </div>
     </div>
@@ -244,6 +244,7 @@
       let old_option_end = option_end.value;
       let change_number = 1;
       let m = 0;
+      const resultG = document.querySelector(".resultG");
       
       function setquestion() {
         question_number = Math.floor(Math.random() * question_wards.length);
@@ -502,6 +503,7 @@
             startquestion();
           } else {
             next.textContent = "最初から";
+            resultG.classList.remove("off");
             if (mistakes_wards.length !== 0) {
               miss.classList.remove("off");
             }
