@@ -186,7 +186,7 @@
         </div>
       </div>
       <div class="resultG off">
-        <span class="rate">50%</span>
+        <span class="ratem">50%</span>
       </div>
     </div>
     <script src="wards.js"></script>
@@ -245,7 +245,9 @@
       let change_number = 1;
       let m = 0;
       const resultG = document.querySelector(".resultG");
+      const ratem = document.querySelector(".ratem");
       let answered_number = 0;
+      let rate = 0;
       
       function setquestion() {
         question_number = Math.floor(Math.random() * question_wards.length);
@@ -514,6 +516,8 @@
             startquestion();
           } else {
             next.textContent = "最初から";
+            rate = Math.round(mistakes_quantity / answered_number);
+            ratem.textContent = rate + "%";
             resultG.classList.remove("off");
             if (mistakes_wards.length !== 0) {
               miss.classList.remove("off");
