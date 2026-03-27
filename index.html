@@ -484,6 +484,13 @@
         question_wards.splice(question_number, 1);
         if (question_wards.length === 0) {
           if (next.textContent === "最初から") {
+            next.classList.add("notclick");
+            o1.classList.remove("notclick");
+            o2.classList.remove("notclick");
+            o3.classList.remove("notclick");
+            o4.classList.remove("notclick");
+            miss.classList.add("off");
+            next.textContent = "次へ";
             startquestion();
           } else {
             next.textContent = "最初から";
