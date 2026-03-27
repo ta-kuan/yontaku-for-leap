@@ -63,18 +63,25 @@
         width: 94%;
         height: 18%;
         margin: 0 3%;
-        justify-content: center;
-        align-items: center;
-        color: rgb(255,255,255);
-        font-weight: 900;
         border-radius: 10px;
-        font-size: 200%;
       }
       .o1,
       .o2,
       .o3,
       .o4 {
         background: rgb(120,200,120);
+      }
+      .o1m,
+      .o2m,
+      .o3m,
+      .o4m {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate;
+        color: rgb(255,255,255);
+        font-weight: 900;
+        font-size: 200%;
       }
       .buttons {
         display: flex;
@@ -140,18 +147,26 @@
       <div class="mondai1"></div>
       <div class="mondai2"></div>
       <div class="options">
-        <button class="o1" id="o1i"></button>
-        <label for="o1i" class="maru m1 off">◯</label>
-        <label for="o1i" class="batu b1 off">×</label>
-        <button class="o2" id="o2i"></button>
-        <label for="o2i" class="maru m2 off">◯</label>
-        <label for="o2i" class="batu b2 off">×</label>
-        <button class="o3" id="o3i"></button>
-        <label for="o3i" class="maru m3 off">◯</label>
-        <label for="o3i" class="batub3 off">×</label>
-        <button class="o4" id="o4i"></button>
-        <label for="o4i" class="maru m4 off">◯</label>
-        <label for="o4i" class="batu b4 off">×</label>
+        <button class="o1" id="o1i">
+          <span class="o1m"></span>
+          <label for="o1i" class="maru m1 off">◯</label>
+          <label for="o1i" class="batu b1 off">×</label>
+        </button>
+        <button class="o2" id="o2i">
+          <span class="o2m"></span>
+          <label for="o2i" class="maru m2 off">◯</label>
+          <label for="o2i" class="batu b2 off">×</label>
+        </button>
+        <button class="o3" id="o3i">
+          <span class="o3m"></span>
+          <label for="o3i" class="maru m3 off">◯</label>
+          <label for="o3i" class="batu b3 off">×</label>
+        </button>
+        <button class="o4" id="o4i">
+          <span class="o4m"></span>
+          <label for="o4i" class="maru m4 off">◯</label>
+          <label for="o4i" class="batu b4 off">×</label>
+        </button>
         <div class="buttons">
           <button class="next">次へ</button>
           <button class="miss off">間違えた問題を やり直す</button>
@@ -168,10 +183,10 @@
       const number = document.querySelector('.number');
       const mondai1 = document.querySelector('.mondai1');
       const mondai2 = document.querySelector('.mondai2');
-      const o1 = document.querySelector('.o1');
-      const o2 = document.querySelector('.o2');
-      const o3 = document.querySelector('.o3');
-      const o4 = document.querySelector('.o4');
+      const o1 = document.querySelector('.o1m');
+      const o2 = document.querySelector('.o2m');
+      const o3 = document.querySelector('.o3m');
+      const o4 = document.querySelector('.o4m');
       const menu = document.querySelector('.menu');
       const menuG = document.querySelector('.menuG');
       const next = document.querySelector('.next');
