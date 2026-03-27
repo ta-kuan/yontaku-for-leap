@@ -245,6 +245,7 @@
       let change_number = 1;
       let m = 0;
       const resultG = document.querySelector(".resultG");
+      let answered_number = 0;
       
       function setquestion() {
         question_number = Math.floor(Math.random() * question_wards.length);
@@ -393,6 +394,7 @@
           alert("1~"+wards.length+"の値にしてください");
         } else {
           old_range_start = range_start.value;
+          answered_number = 0;
           startquestion();
         }
       });
@@ -402,6 +404,7 @@
           alert("1~"+wards.length+"の値にしてください");
         } else {
           old_range_end = range_end.value;
+          answered_number = 0;
           startquestion();
         }
       });
@@ -414,6 +417,7 @@
           alert("選択肢範囲は4つ以上にしてください");
         } else {
           old_option_start = option_start.value;
+          answered_number = 0;
           startquestion();
         }
       });
@@ -426,6 +430,7 @@
           alert("選択肢範囲4つ以上にしてください");
         } else {
           old_option_end = option_end.value;
+          answered_number = 0;
           startquestion();
         }
       });
@@ -436,6 +441,7 @@
           mistakes_wards[mistakes_quantity] = question_wards[question_number];
           mistakes_quantity += 1;
         }
+        answered_number += 1;
         next.classList.remove("notclick");
         o1.classList.add("notclick");
         o2.classList.add("notclick");
@@ -449,6 +455,7 @@
           mistakes_wards[mistakes_quantity] = question_wards[question_number];
           mistakes_quantity += 1;
         }
+        answered_number += 1;
         next.classList.remove("notclick");
         o1.classList.add("notclick");
         o2.classList.add("notclick");
@@ -462,6 +469,7 @@
           mistakes_wards[mistakes_quantity] = question_wards[question_number];
           mistakes_quantity += 1;
         }
+        answered_number += 1;
         next.classList.remove("notclick");
         o1.classList.add("notclick");
         o2.classList.add("notclick");
@@ -475,6 +483,7 @@
           mistakes_wards[mistakes_quantity] = question_wards[question_number];
           mistakes_quantity += 1;
         }
+        answered_number += 1;
         next.classList.remove("notclick");
         o1.classList.add("notclick");
         o2.classList.add("notclick");
@@ -499,6 +508,7 @@
             o3.classList.remove("notclick");
             o4.classList.remove("notclick");
             miss.classList.add("off");
+            answered_number = 0;
             next.textContent = "次へ";
             startquestion();
           } else {
@@ -524,6 +534,7 @@
         next.textContent = "次";
         mistakes_wards = [];
         mistakes_quantity = 0;
+        answered_number = 0;
         next.classList.add("notclick");
         o1.classList.remove("notclick");
         o2.classList.remove("notclick");
