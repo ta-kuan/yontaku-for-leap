@@ -488,9 +488,8 @@
             miss.classList.remove("off");
           }
           next.classList.remove("notclick");
-          if (next.textContent === "最初から") {
-            startquestion();
-          }
+        } else if (next.textContent === "最初から") {
+          startquestion();
         } else {
           next.classList.add("notclick");
           o1.classList.remove("notclick");
