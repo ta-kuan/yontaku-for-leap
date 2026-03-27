@@ -104,6 +104,9 @@
         background: rgb(120,200,120);
         font-family: kosugi, sans-serif;
       }
+      .next {
+        font-size: 150%;
+      }
       .miss {
         background: rgb(240,180,80) !important;
       }
@@ -184,10 +187,14 @@
       const number = document.querySelector('.number');
       const mondai1 = document.querySelector('.mondai1');
       const mondai2 = document.querySelector('.mondai2');
-      const o1 = document.querySelector('.o1m');
-      const o2 = document.querySelector('.o2m');
-      const o3 = document.querySelector('.o3m');
-      const o4 = document.querySelector('.o4m');
+      const o1 = document.querySelector('.o1');
+      const o2 = document.querySelector('.o2');
+      const o3 = document.querySelector('.o3');
+      const o4 = document.querySelector('.o4');
+      const o1m = document.querySelector('.o1m');
+      const o2m = document.querySelector('.o2m');
+      const o3m = document.querySelector('.o3m');
+      const o4m = document.querySelector('.o4m');
       const menu = document.querySelector('.menu');
       const menuG = document.querySelector('.menuG');
       const next = document.querySelector('.next');
@@ -327,10 +334,10 @@
             m = 4;
             break;
         }
-        o1.textContent = o1text;
-        o2.textContent = o2text;
-        o3.textContent = o3text;
-        o4.textContent = o4text;
+        o1m.textContent = o1text;
+        o2m.textContent = o2text;
+        o3m.textContent = o3text;
+        o4m.textContent = o4text;
         next.classList.add("notclick");
       }
       function startquestion() {
