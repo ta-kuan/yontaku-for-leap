@@ -502,7 +502,7 @@
       });
       miss.addEventListener('click', () => {
         miss.classList.add("off");
-        question_wards = mistakes_wards;
+        question_wards = [...mistakes_wards];
         next.textContent = "次";
         mistakes_wards = [];
         mistakes_quantity = 0;
