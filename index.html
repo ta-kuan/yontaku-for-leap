@@ -492,15 +492,19 @@
         switch(m) {
           case 1:
             m1.classList.remove("off");
+            o1.classList.add("mback");
             break;
           case 2:
             m2.classList.remove("off");
+            o2.classList.add("mback");
             break;
           case 3:
             m3.classList.remove("off");
+            o3.classList.add("mback");
             break;
           case 4:
             m4.classList.remove("off");
+            o4.classList.add("mback");
             break;
         }
       }
@@ -559,6 +563,7 @@
           b1.classList.remove("off");
           mistakes_wards[mistakes_quantity] = question_wards[question_number];
           mistakes_quantity += 1;
+          o1.classList.add("bback");
         }
         answered_number += 1;
         next.classList.remove("notclick");
@@ -573,6 +578,7 @@
           b2.classList.remove("off");
           mistakes_wards[mistakes_quantity] = question_wards[question_number];
           mistakes_quantity += 1;
+          o2.classList.add("bback");
         }
         answered_number += 1;
         next.classList.remove("notclick");
@@ -587,6 +593,7 @@
           b3.classList.remove("off");
           mistakes_wards[mistakes_quantity] = question_wards[question_number];
           mistakes_quantity += 1;
+          o3.classList.add("bback");
         }
         answered_number += 1;
         next.classList.remove("notclick");
@@ -601,6 +608,7 @@
           b4.classList.remove("off");
           mistakes_wards[mistakes_quantity] = question_wards[question_number];
           mistakes_quantity += 1;
+          o4.classList.add("bback");
         }
         answered_number += 1;
         next.classList.remove("notclick");
@@ -618,6 +626,14 @@
         b3.classList.add("off");
         m4.classList.add("off");
         b4.classList.add("off");
+        o1.classList.remove("mback");
+        o1.classList.remove("bback");
+        o2.classList.remove("mback");
+        o2.classList.remove("bback");
+        o3.classList.remove("mback");
+        o3.classList.remove("bback");
+        o4.classList.remove("mback");
+        o4.classList.remove("bback");
         question_wards.splice(question_number, 1);
         if (question_wards.length === 0) {
           if (next.textContent === "最初から") {
