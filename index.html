@@ -635,6 +635,170 @@
         next.textContent = "次へ";
         startquestion();
       });
+      range_select.addEventListener("change", () => {
+        if (weeks.value === "P1:Week1") {
+          document.getElementById("start").value = 1;
+          document.getElementById("end").value = 42;
+        } else if (weeks.value === "P1:Week2") {
+          document.getElementById("start").value = 43;
+          document.getElementById("end").value = 86;
+        } else if (weeks.value === "P1:Week3") {
+          document.getElementById("start").value = 87;
+          document.getElementById("end").value = 133;
+        } else if (weeks.value === "P1:Week4") {
+          document.getElementById("start").value = 134;
+          document.getElementById("end").value = 175;
+        } else if (weeks.value === "P1:Week5") {
+          document.getElementById("start").value = 176;
+          document.getElementById("end").value = 219;
+        } else if (weeks.value === "P1:Week6") {
+          document.getElementById("start").value = 220;
+          document.getElementById("end").value = 263;
+        } else if (weeks.value === "P1:Week7") {
+          document.getElementById("start").value = 264;
+          document.getElementById("end").value = 313;
+        } else if (weeks.value === "P1:Week8") {
+          document.getElementById("start").value = 314;
+          document.getElementById("end").value = 354;
+        } else if (weeks.value === "P1:Week9") {
+          document.getElementById("start").value = 355;
+          document.getElementById("end").value = 400;
+        } else if (weeks.value === "P1:ALL") {
+          document.getElementById("start").value = 1;
+          document.getElementById("end").value =400;
+        } else if (weeks.value === "P2:Week1") {
+          document.getElementById("start").value = 401;
+          document.getElementById("end").value = 443;
+        } else if (weeks.value === "P2:Week2") {
+          document.getElementById("start").value = 444;
+          document.getElementById("end").value = 490;
+        } else if (weeks.value === "P2:Week3") {
+          document.getElementById("start").value = 491;
+          document.getElementById("end").value = 537;
+        } else if (weeks.value === "P2:Week4") {
+          document.getElementById("start").value = 538;
+          document.getElementById("end").value = 583;
+        } else if (weeks.value === "P2:Week5") {
+          document.getElementById("start").value = 584;
+          document.getElementById("end").value = 626;
+        } else if (weeks.value === "P2:Week6") {
+          document.getElementById("start").value = 627;
+          document.getElementById("end").value = 670;
+        } else if (weeks.value === "P2:Week7") {
+          document.getElementById("start").value = 671;
+          document.getElementById("end").value = 710;
+        } else if (weeks.value === "P2:Week8") {
+          document.getElementById("start").value = 711;
+          document.getElementById("end").value = 755;
+        } else if (weeks.value === "P2:Week9") {
+          document.getElementById("start").value = 756;
+          document.getElementById("end").value = 799;
+        } else if (weeks.value === "P2:Week10") {
+          document.getElementById("start").value = 800;
+          document.getElementById("end").value = 842;
+        } else if (weeks.value === "P2:Week11") {
+          document.getElementById("start").value = 843;
+          document.getElementById("end").value = 881;
+        } else if (weeks.value === "P2:Week12") {
+          document.getElementById("start").value = 882;
+          document.getElementById("end").value = 923;
+        } else if (weeks.value === "P2:Week13") {
+          document.getElementById("start").value = 924;
+          document.getElementById("end").value = 966;
+        } else if (weeks.value === "P2:Week14") {
+          document.getElementById("start").value = 967;
+          document.getElementById("end").value = 1000;
+        } else if (weeks.value === "P2:ALL") {
+          document.getElementById("start").value = 401;
+          document.getElementById("end").value = 1000;
+        } else if (weeks.value === "ALL") {
+          document.getElementById("start").value = 1;
+          document.getElementById("end").value = 1000;
+        }
+        startquestion();
+      });
+      option_select.addEventListener("change", () => {
+        if (weeks.value === "P1:Week1") {
+          document.getElementById("start").value = 1;
+          document.getElementById("end").value = 42;
+        } else if (weeks.value === "P1:Week2") {
+          document.getElementById("start").value = 43;
+          document.getElementById("end").value = 86;
+        } else if (weeks.value === "P1:Week3") {
+          document.getElementById("start").value = 87;
+          document.getElementById("end").value = 133;
+        } else if (weeks.value === "P1:Week4") {
+          document.getElementById("start").value = 134;
+          document.getElementById("end").value = 175;
+        } else if (weeks.value === "P1:Week5") {
+          document.getElementById("start").value = 176;
+          document.getElementById("end").value = 219;
+        } else if (weeks.value === "P1:Week6") {
+          document.getElementById("start").value = 220;
+          document.getElementById("end").value = 263;
+        } else if (weeks.value === "P1:Week7") {
+          document.getElementById("start").value = 264;
+          document.getElementById("end").value = 313;
+        } else if (weeks.value === "P1:Week8") {
+          document.getElementById("start").value = 314;
+          document.getElementById("end").value = 354;
+        } else if (weeks.value === "P1:Week9") {
+          document.getElementById("start").value = 355;
+          document.getElementById("end").value = 400;
+        } else if (weeks.value === "P1:ALL") {
+          document.getElementById("start").value = 1;
+          document.getElementById("end").value =400;
+        } else if (weeks.value === "P2:Week1") {
+          document.getElementById("start").value = 401;
+          document.getElementById("end").value = 443;
+        } else if (weeks.value === "P2:Week2") {
+          document.getElementById("start").value = 444;
+          document.getElementById("end").value = 490;
+        } else if (weeks.value === "P2:Week3") {
+          document.getElementById("start").value = 491;
+          document.getElementById("end").value = 537;
+        } else if (weeks.value === "P2:Week4") {
+          document.getElementById("start").value = 538;
+          document.getElementById("end").value = 583;
+        } else if (weeks.value === "P2:Week5") {
+          document.getElementById("start").value = 584;
+          document.getElementById("end").value = 626;
+        } else if (weeks.value === "P2:Week6") {
+          document.getElementById("start").value = 627;
+          document.getElementById("end").value = 670;
+        } else if (weeks.value === "P2:Week7") {
+          document.getElementById("start").value = 671;
+          document.getElementById("end").value = 710;
+        } else if (weeks.value === "P2:Week8") {
+          document.getElementById("start").value = 711;
+          document.getElementById("end").value = 755;
+        } else if (weeks.value === "P2:Week9") {
+          document.getElementById("start").value = 756;
+          document.getElementById("end").value = 799;
+        } else if (weeks.value === "P2:Week10") {
+          document.getElementById("start").value = 800;
+          document.getElementById("end").value = 842;
+        } else if (weeks.value === "P2:Week11") {
+          document.getElementById("start").value = 843;
+          document.getElementById("end").value = 881;
+        } else if (weeks.value === "P2:Week12") {
+          document.getElementById("start").value = 882;
+          document.getElementById("end").value = 923;
+        } else if (weeks.value === "P2:Week13") {
+          document.getElementById("start").value = 924;
+          document.getElementById("end").value = 966;
+        } else if (weeks.value === "P2:Week14") {
+          document.getElementById("start").value = 967;
+          document.getElementById("end").value = 1000;
+        } else if (weeks.value === "P2:ALL") {
+          document.getElementById("start").value = 401;
+          document.getElementById("end").value = 1000;
+        } else if (weeks.value === "ALL") {
+          document.getElementById("start").value = 1;
+          document.getElementById("end").value = 1000;
+        }
+        startquestion();
+      });
       startquestion();
     </script>
   </body>
