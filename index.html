@@ -518,7 +518,7 @@
             startquestion();
           } else {
             next.textContent = "最初から";
-            rate = Math.round(mistakes_quantity / answered_number * 100);
+            rate = 100 - Math.round(mistakes_quantity / answered_number * 100);
             ratem.textContent = rate + "%";
             resultG.classList.remove("off");
             if (mistakes_wards.length !== 0) {
