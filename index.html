@@ -251,6 +251,7 @@
       let rate = 0;
       
       function setquestion() {
+        resultG.classList.remove("off");
         question_number = Math.floor(Math.random() * question_wards.length);
         number.textContent = question_wards[question_number][0];
         if (change.classList.contains("switch1")) {
@@ -520,7 +521,6 @@
             next.textContent = "最初から";
             rate = 100 - Math.round(mistakes_quantity / answered_number * 100);
             ratem.textContent = rate + "%";
-            resultG.classList.remove("off");
             if (mistakes_wards.length !== 0) {
               miss.classList.remove("off");
             }
@@ -542,7 +542,6 @@
         mistakes_wards = [];
         mistakes_quantity = 0;
         answered_number = 0;
-        results.classList.add("off");
         next.classList.add("notclick");
         o1.classList.remove("notclick");
         o2.classList.remove("notclick");
