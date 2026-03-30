@@ -396,8 +396,8 @@
           mondai1.textContent = question_words[question_number][1];
           mondai2.textContent = "";
         } else {
-          mondai1.textContent = question_words[question_number][2];
-          mondai2.textContent = question_words[question_number][3];
+          mondai1.textContent = "①" + question_words[question_number][2];
+          mondai2.textContent = "②" + question_words[question_number][3];
         }
         answer_number = Math.floor(Math.random() * 4);
         switch (answer_number) {
