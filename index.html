@@ -326,7 +326,7 @@
       </div>
       <div class="menuGkakusi"></div>
     </div>
-    <script src="wards.js"></script>
+    <script src="words.js"></script>
     <script>
       const all = document.querySelector('.all');
       const range_start = document.querySelector('.range_start');
@@ -358,9 +358,9 @@
       const b4 = document.querySelector('.b4');
       const change = document.querySelector('.change');
       const changem = document.querySelector('.changem');
-      let question_wards = [];
-      let option_wards = [];
-      let mistakes_wards = [];
+      let question_words = [];
+      let option_words = [];
+      let mistakes_words = [];
       let mistakes_quantity = 0;
       let question_number = 0;
       let answer_number = 0;
@@ -390,102 +390,102 @@
       
       function setquestion() {
         resultG.classList.add("off");
-        question_number = Math.floor(Math.random() * question_wards.length);
-        number.textContent = question_wards[question_number][0];
+        question_number = Math.floor(Math.random() * question_words.length);
+        number.textContent = question_words[question_number][0];
         if (change.classList.contains("switch1")) {
-          mondai1.textContent = question_wards[question_number][1];
+          mondai1.textContent = question_words[question_number][1];
           mondai2.textContent = "";
         } else {
-          mondai1.textContent = question_wards[question_number][2];
-          mondai2.textContent = question_wards[question_number][3];
+          mondai1.textContent = question_words[question_number][2];
+          mondai2.textContent = question_words[question_number][3];
         }
         answer_number = Math.floor(Math.random() * 4);
         switch (answer_number) {
           case 0:
-            o1text = question_wards[question_number][change_number];
-            option_number = Math.floor(Math.random() * option_wards.length);
-            o2text = option_wards[option_number][change_number];
+            o1text = question_words[question_number][change_number];
+            option_number = Math.floor(Math.random() * option_words.length);
+            o2text = option_words[option_number][change_number];
             while (o2text === o1text) {
-              option_number = Math.floor(Math.random() * option_wards.length);
-              o2text = option_wards[option_number][change_number];
+              option_number = Math.floor(Math.random() * option_words.length);
+              o2text = option_words[option_number][change_number];
             }
-            option_number = Math.floor(Math.random() * option_wards.length);
-            o3text = option_wards[option_number][change_number];
+            option_number = Math.floor(Math.random() * option_words.length);
+            o3text = option_words[option_number][change_number];
             while (o3text === o1text || o3text === o2text) {
-              option_number = Math.floor(Math.random() * option_wards.length);
-              o3text = option_wards[option_number][change_number];
+              option_number = Math.floor(Math.random() * option_words.length);
+              o3text = option_words[option_number][change_number];
             }
-            option_number = Math.floor(Math.random() * option_wards.length);
-            o4text = option_wards[option_number][change_number];
+            option_number = Math.floor(Math.random() * option_words.length);
+            o4text = option_words[option_number][change_number];
             while (o4text === o1text || o4text === o2text || o4text === o3text) {
-              option_number = Math.floor(Math.random() * option_wards.length);
-              o4text = option_wards[option_number][change_number];
+              option_number = Math.floor(Math.random() * option_words.length);
+              o4text = option_words[option_number][change_number];
             }
             m = 1;
             break;
           case 1:
-            o2text = question_wards[question_number][change_number];
-            option_number = Math.floor(Math.random() * option_wards.length);
-            o1text = option_wards[option_number][change_number];
+            o2text = question_words[question_number][change_number];
+            option_number = Math.floor(Math.random() * option_words.length);
+            o1text = option_words[option_number][change_number];
             while (o1text === o2text) {
-              option_number = Math.floor(Math.random() * option_wards.length);
-              o1text = option_wards[option_number][change_number];
+              option_number = Math.floor(Math.random() * option_words.length);
+              o1text = option_words[option_number][change_number];
             }
-            option_number = Math.floor(Math.random() * option_wards.length);
-            o3text = option_wards[option_number][change_number];
+            option_number = Math.floor(Math.random() * option_words.length);
+            o3text = option_words[option_number][change_number];
             while (o3text === o1text || o3text === o2text) {
-              option_number = Math.floor(Math.random() * option_wards.length);
-              o3text = option_wards[option_number][change_number];
+              option_number = Math.floor(Math.random() * option_words.length);
+              o3text = option_words[option_number][change_number];
             }
-            option_number = Math.floor(Math.random() * option_wards.length);
-            o4text = option_wards[option_number][change_number];
+            option_number = Math.floor(Math.random() * option_words.length);
+            o4text = option_words[option_number][change_number];
             while (o4text === o1text || o4text === o2text || o4text === o3text) {
-              option_number = Math.floor(Math.random() * option_wards.length);
-              o4text = option_wards[option_number][change_number];
+              option_number = Math.floor(Math.random() * option_words.length);
+              o4text = option_words[option_number][change_number];
             }
             m = 2;
             break;
           case 2:
-            o3text = question_wards[question_number][change_number];
-            option_number = Math.floor(Math.random() * option_wards.length);
-            o1text = option_wards[option_number][change_number];
+            o3text = question_words[question_number][change_number];
+            option_number = Math.floor(Math.random() * option_words.length);
+            o1text = option_words[option_number][change_number];
             while (o1text === o3text) {
-              option_number = Math.floor(Math.random() * option_wards.length);
-              o1text = option_wards[option_number][change_number];
+              option_number = Math.floor(Math.random() * option_words.length);
+              o1text = option_words[option_number][change_number];
             }
-            option_number = Math.floor(Math.random() * option_wards.length);
-            o2text = option_wards[option_number][change_number];
+            option_number = Math.floor(Math.random() * option_words.length);
+            o2text = option_words[option_number][change_number];
             while (o2text === o1text || o2text === o3text) {
-              option_number = Math.floor(Math.random() * option_wards.length);
-              o2text = option_wards[option_number][change_number];
+              option_number = Math.floor(Math.random() * option_words.length);
+              o2text = option_words[option_number][change_number];
             }
-            option_number = Math.floor(Math.random() * option_wards.length);
-            o4text = option_wards[option_number][change_number];
+            option_number = Math.floor(Math.random() * option_words.length);
+            o4text = option_words[option_number][change_number];
             while (o4text === o1text || o4text === o2text || o4text === o3text) {
-              option_number = Math.floor(Math.random() * option_wards.length);
-              o4text = option_wards[option_number][change_number];
+              option_number = Math.floor(Math.random() * option_words.length);
+              o4text = option_words[option_number][change_number];
             }
             m = 3;
             break;
           case 3:
-            o4text = question_wards[question_number][change_number];
-            option_number = Math.floor(Math.random() * option_wards.length);
-            o1text = option_wards[option_number][change_number];
+            o4text = question_words[question_number][change_number];
+            option_number = Math.floor(Math.random() * option_words.length);
+            o1text = option_words[option_number][change_number];
             while (o1text === o4text) {
-              option_number = Math.floor(Math.random() * option_wards.length);
-              o1text = option_wards[option_number][change_number];
+              option_number = Math.floor(Math.random() * option_words.length);
+              o1text = option_words[option_number][change_number];
             }
-            option_number = Math.floor(Math.random() * option_wards.length);
-            o2text = option_wards[option_number][change_number];
+            option_number = Math.floor(Math.random() * option_words.length);
+            o2text = option_words[option_number][change_number];
             while (o2text === o1text || o2text === o4text) {
-              option_number = Math.floor(Math.random() * option_wards.length);
-              o2text = option_wards[option_number][change_number];
+              option_number = Math.floor(Math.random() * option_words.length);
+              o2text = option_words[option_number][change_number];
             }
-            option_number = Math.floor(Math.random() * option_wards.length);
-            o3text = option_wards[option_number][change_number];
+            option_number = Math.floor(Math.random() * option_words.length);
+            o3text = option_words[option_number][change_number];
             while (o3text === o1text || o3text === o2text || o3text === o4text) {
-              option_number = Math.floor(Math.random() * option_wards.length);
-              o3text = option_wards[option_number][change_number];
+              option_number = Math.floor(Math.random() * option_words.length);
+              o3text = option_words[option_number][change_number];
             }
             m = 4;
             break;
@@ -497,17 +497,17 @@
         next.classList.add("notclick");
       }
       function startquestion() {
-        question_wards = [];
-        option_wards = [];
+        question_words = [];
+        option_words = [];
         question_range = Number(range_end.value) - Number(range_start.value) + 1;
         for (let i = 0;i < question_range;i ++) {
-          question_wards[i] = wards[Number(range_start.value) + i - 1];
+          question_words[i] = words[Number(range_start.value) + i - 1];
         }
         option_range = Number(option_end.value) - Number(option_start.value) + 1;
         for (let i = 0;i < option_range;i ++) {
-          option_wards[i] = wards[Number(option_start.value) + i - 1];
+          option_words[i] = words[Number(option_start.value) + i - 1];
         }
-        mistakes_wards = [];
+        mistakes_words = [];
         mistakes_quantity = 0;
         answered_number = 0;
         setquestion();
@@ -536,9 +536,9 @@
         menuG.classList.toggle("slide");
       });
       range_start.addEventListener('change', (event) => {
-        if (range_start.value <= 0 || range_start.value > wards.length) {
+        if (range_start.value <= 0 || range_start.value > words.length) {
           range_start.value = old_range_start;
-          alert("1~"+wards.length+"の値にしてください");
+          alert("1~"+words.length+"の値にしてください");
         } else {
           old_range_start = range_start.value;
           answered_number = 0;
@@ -546,9 +546,9 @@
         }
       });
       range_end.addEventListener('change', (event) => {
-        if (range_end.value <= 0 || range_end.value > wards.length) {
+        if (range_end.value <= 0 || range_end.value > words.length) {
           range_end.value = old_range_end;
-          alert("1~"+wards.length+"の値にしてください");
+          alert("1~"+words.length+"の値にしてください");
         } else {
           old_range_end = range_end.value;
           answered_number = 0;
@@ -556,9 +556,9 @@
         }
       });
       option_start.addEventListener('change', (event) => {
-        if (option_start.value <= 0 || option_start.value > wards.length) {
+        if (option_start.value <= 0 || option_start.value > words.length) {
           option_start.value = old_option_start;
-          alert("1~"+wards.length+"の値にしてください");
+          alert("1~"+words.length+"の値にしてください");
         } else if (option_end.value < option_start.value + 3) {
           option_start.value = old_option_start;
           alert("選択肢範囲は4つ以上にしてください");
@@ -569,9 +569,9 @@
         }
       });
       option_end.addEventListener('change', (event) => {
-        if (option_end.value <= 0 || option_end.value > wards.length) {
+        if (option_end.value <= 0 || option_end.value > words.length) {
           option_end.value = old_option_end;
-          alert("1~"+wards.length+"の値にしてください");
+          alert("1~"+words.length+"の値にしてください");
         } else if (option_end.value < option_start.value + 3) {
           option_start.value = old_option_start;
           alert("選択肢範囲4つ以上にしてください");
@@ -585,7 +585,7 @@
         setmaru();
         if (answer_number !== 0) {
           b1.classList.remove("off");
-          mistakes_wards[mistakes_quantity] = question_wards[question_number];
+          mistakes_words[mistakes_quantity] = question_words[question_number];
           mistakes_quantity += 1;
           o1.classList.add("bback");
         }
@@ -600,7 +600,7 @@
         setmaru();
         if (answer_number !== 1) {
           b2.classList.remove("off");
-          mistakes_wards[mistakes_quantity] = question_wards[question_number];
+          mistakes_words[mistakes_quantity] = question_words[question_number];
           mistakes_quantity += 1;
           o2.classList.add("bback");
         }
@@ -615,7 +615,7 @@
         setmaru();
         if (answer_number !== 2) {
           b3.classList.remove("off");
-          mistakes_wards[mistakes_quantity] = question_wards[question_number];
+          mistakes_words[mistakes_quantity] = question_words[question_number];
           mistakes_quantity += 1;
           o3.classList.add("bback");
         }
@@ -630,7 +630,7 @@
         setmaru();
         if (answer_number !== 3) {
           b4.classList.remove("off");
-          mistakes_wards[mistakes_quantity] = question_wards[question_number];
+          mistakes_words[mistakes_quantity] = question_words[question_number];
           mistakes_quantity += 1;
           o4.classList.add("bback");
         }
@@ -658,8 +658,8 @@
         o3.classList.remove("bback");
         o4.classList.remove("mback");
         o4.classList.remove("bback");
-        question_wards.splice(question_number, 1);
-        if (question_wards.length === 0) {
+        question_words.splice(question_number, 1);
+        if (question_words.length === 0) {
           if (next.textContent === "最初から") {
             next.classList.add("notclick");
             o1.classList.remove("notclick");
@@ -675,7 +675,7 @@
             rate = 100 - Math.round(mistakes_quantity / answered_number * 100);
             ratem.textContent = rate + "%";
             resultG.classList.remove("off");
-            if (mistakes_wards.length !== 0) {
+            if (mistakes_words.length !== 0) {
               miss.classList.remove("off");
             }
             mondai1.textContent = "";
@@ -694,9 +694,9 @@
       });
       miss.addEventListener('click', () => {
         miss.classList.add("off");
-        question_wards = [...mistakes_wards];
+        question_words = [...mistakes_words];
         next.textContent = "次";
-        mistakes_wards = [];
+        mistakes_words = [];
         mistakes_quantity = 0;
         answered_number = 0;
         next.classList.add("notclick");
@@ -715,7 +715,7 @@
           change_number = 1;
         }
         mistakes_quantity = 0;
-        mistakes_wards = [];
+        mistakes_words = [];
         next.classList.add("notclick");
         o1.classList.remove("notclick");
         o2.classList.remove("notclick");
