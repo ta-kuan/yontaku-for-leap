@@ -471,7 +471,6 @@
       const b3 = document.querySelector('.b3');
       const b4 = document.querySelector('.b4');
       const change = document.querySelector('.change');
-      const changem = document.querySelector('.changem');
       let question_words = [];
       let option_words = [];
       let mistakes_words = [];
@@ -826,7 +825,6 @@
       });
       change.addEventListener('click', () => {
         change.classList.toggle("switch1");
-        changem.classList.toggle("switch1");
         if (change.classList.contains("switch1")) {
           change_number = 2;
         } else {
