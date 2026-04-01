@@ -15,6 +15,7 @@
       body {
         background: rgb(250,250,220);
         margin: 0;
+        color: rgb(0,0,0);
       }
       .off {
         display: none !important;
@@ -217,6 +218,112 @@
         top: 50%;
         transform: translate(-50%, -30%);
         font-size: 180%;
+      }
+      .rangeset {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10%;
+        width: 90%;
+        height: 25%;
+        background: rgb(180,230,230);
+        border-radius: 15px;
+        border: solid 2px rgb(100,100,100);
+      }
+      .rangem{
+        position: absolute;
+        right: 10%;
+        top: -10%;
+        width: 25%;
+        height: 20%;
+        background: rgb(180,230,230);
+        border-radius: 15px;
+        border: solid 2px rgb(100,100,100);
+      }
+      .rangem::after {
+        content: "出題範囲";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        white-space: nowrap;
+      }
+      .optionset {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 43%;
+        width: 90%;
+        height: 25%;
+        background: rgb(190,230,190);
+        border-radius: 15px;
+        border: solid 2px rgb(100,100,100);
+      }
+      .optionm{
+        position: absolute;
+        right: 7%;
+        top: -10%;
+        width: 31%;
+        height: 20%;
+        background: rgb(190,230,150);
+        border-radius: 15px;
+        border: solid 2px rgb(100,100,100);
+      }
+      .optionm::after {
+        content: "選択肢範囲";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        white-space: nowrap;
+      }
+      .range_select,
+      .option_select {
+        position: absolute;
+        width: 40%;
+        height: 20%;
+        left: 10%;
+        top: 15%;
+        border: none;
+        background: rgb(250,250,200);
+        border-radius: 10px;
+        font-size: 120%;
+        text-align: center;
+      }
+      .range_start,
+      .option_start {
+        position: absolute;
+        width: 17%;
+        height: 17%;
+        left: 25%;
+        top: 60%;
+        border: none;
+        background: rgb(250,250,200);
+        border-radius: 10px;
+        font-size: 110%;
+        text-align: center;
+      }
+      .range_end,
+      .option_end {
+        position: absolute;
+        width: 17%;
+        height: 17%;
+        left: 55%;
+        top: 60%;
+        border: none;
+        background: rgb(250,250,200);
+        border-radius: 10px;
+        font-size: 110%;
+        text-align: center;
+      }
+      .bo {
+        position: absolute;
+        left: 45.5%;
+        top: 57%;
+        font-size: 140%;
+      }
+      .change{
+        
       }
     </style>
   </head>
