@@ -386,6 +386,12 @@
         font-size: 170%;
         font-weight: bold;
       }
+      .ja {
+        font-family: kosugi, sans-serif;
+      }
+      .en {
+        font-family: en, sans-serif;
+      }
     </style>
   </head>
   <body>
@@ -893,8 +899,32 @@
         change.classList.toggle("switch1");
         if (change.classList.contains("switch1")) {
           change_number = 2;
+          mondai1.classList.remove("ja");
+          mondai2.classList.remove("ja");
+          o1.classList.remove("en");
+          o2.classList.remove("en");
+          o3.classList.remove("en");
+          o4.classList.remove("en");
+          mondai1.classList.add("en");
+          mondai2.classList.add("en");
+          o1.classList.add("ja");
+          o2.classList.add("ja");
+          o3.classList.add("ja");
+          o4.classList.add("ja");
         } else {
           change_number = 1;
+          mondai1.classList.remove("en");
+          mondai2.classList.remove("en");
+          o1.classList.remove("ja");
+          o2.classList.remove("ja");
+          o3.classList.remove("ja");
+          o4.classList.remove("ja");
+          mondai1.classList.add("ja");
+          mondai2.classList.add("ja");
+          o1.classList.add("en");
+          o2.classList.add("en");
+          o3.classList.add("en");
+          o4.classList.add("en");
         }
         mistakes_quantity = 0;
         mistakes_words = [];
