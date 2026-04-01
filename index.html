@@ -76,6 +76,7 @@
         z-index: 2;
         opacity: 1;
         transition: left 0.6s, opacity 0.8s;
+        color: rgb(0,0,0);
       }
       .menuGkakusi {
         position: absolute;
@@ -199,14 +200,6 @@
         transform: translateY(-50%);
         width: 12%;
       }
-      .change {
-        width: 30px;
-        height: 30px;
-        background: rgb(0,0,0);
-      }
-      .switch1 {
-        background: rgb(255,0,0);
-      }
       .linka {
         position: absolute;
         left: 2%;
@@ -322,8 +315,70 @@
         top: 57%;
         font-size: 140%;
       }
+      .changeset {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 75%;
+        width: 90%;
+        height: 12%;
+        background: rgb(250,250,200);
+        border-radius: 15px;
+        border: solid 2px rgb(100,100,100);
+      }
+      .changem{
+        position: absolute;
+        right: 10%;
+        top: -21%;
+        width: 25%;
+        height: 41%;
+        background: rgb(250,250,200);
+        border-radius: 15px;
+        border: solid 2px rgb(100,100,100);
+      }
+      .changem::after {
+        content: "問題形式";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%) rotate(0deg);
+        white-space: nowrap;
+      }
       .change{
-        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        width: 30px;
+        height: 30px;
+        background: rgb(230,230,230);
+        border: none;
+        transition: transform 0.3s;
+        margin: 0;
+        font-size: 150%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0 1% 0;
+      }
+      .switch1 {
+        transform: translate(-50%,-30%) rotate(180deg);
+      }
+      .niti {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-220%, -38%);
+        font-size: 170%;
+        font-weight: bold;
+      }
+      .ei {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(110%, -38%);
+        font-size: 170%;
+        font-weight: bold;
       }
     </style>
   </head>
