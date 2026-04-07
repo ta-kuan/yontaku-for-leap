@@ -551,9 +551,9 @@
       let o3text = "";
       let o4text = "";
       range_start.value = 1;
-      range_end.value = 400;
+      range_end.value = 1400;
       option_start.value = 1;
-      option_end.value = 400;
+      option_end.value = 1400;
       let old_range_start = range_start.value;
       let old_range_end = range_end.value;
       let old_option_start = option_start.value;
@@ -999,9 +999,30 @@
         } else if (range_select.value === "P2:ALL") {
           range_start.value = 401;
           range_end.value = 1000;
+        } else if (range_select.value === "P3:Week1") {
+          range_start.value = 1001;
+          range_end.value = 1061;
+        } else if (range_select.value === "P3:Week2") {
+          range_start.value = 1062;
+          range_end.value = 1130;
+        } else if (range_select.value === "P3:Week3") {
+          range_start.value = 1131;
+          range_end.value = 1197;
+        } else if (range_select.value === "P3:Week4") {
+          range_start.value = 1198;
+          range_end.value = 1257;
+        } else if (range_select.value === "P3:Week5") {
+          range_start.value = 1258;
+          range_end.value = 1330;
+        } else if (range_select.value === "P3:Week6") {
+          range_start.value = 1331;
+          range_end.value = 1400;
+        } else if (range_select.value === "P3:ALL") {
+          range_start.value = 1001;
+          range_end.value = 1400;
         } else if (range_select.value === "ALL") {
           range_start.value = 1;
-          range_end.value = 1000;
+          range_end.value = 1400;
         }
         startquestion();
       });
@@ -1081,6 +1102,27 @@
         } else if (option_select.value === "P2:ALL") {
           option_start.value = 401;
           option_end.value = 1000;
+        } else if (option_select.value === "P3:Week1") {
+          option_start.value = 1001;
+          option_end.value = 1061;
+        } else if (option_select.value === "P3:Week2") {
+          option_start.value = 1062;
+          option_end.value = 1130;
+        } else if (option_select.value === "P3:Week3") {
+          option_start.value = 1131;
+          option_end.value = 1197;
+        } else if (option_select.value === "P3:Week4") {
+          option_start.value = 1198;
+          option_end.value = 1257;
+        } else if (option_select.value === "P3:Week5") {
+          option_start.value = 1258;
+          option_end.value = 1330;
+        } else if (option_select.value === "P3:Week6") {
+          option_start.value = 1331;
+          option_end.value = 1400;
+        } else if (option_select.value === "P3:ALL") {
+          option_start.value = 1001;
+          option_end.value = 1400;
         } else if (option_select.value === "ALL") {
           option_start.value = 1;
           option_end.value = 1000;
