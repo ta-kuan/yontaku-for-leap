@@ -604,7 +604,7 @@
             if (change_number === 1) {
               o3imi = option_words[option_number][2];
             }
-            while (o3text === o1text || o3text === o2text) {
+            while (change_number === 1 ? ((o3text === o1text || o3text === o2text) && (o3imi === o1imi || o3imi === o2imi) : (o3text === o1text || o3text === o2text)) {
               option_number = Math.floor(Math.random() * option_words.length);
               o3text = option_words[option_number][change_number];
               if (change_number === 1) {
@@ -645,7 +645,7 @@
             if (change_number === 1) {
               o3imi = option_words[option_number][2];
             }
-            while (o3text === o1text || o3text === o2text) {
+            while (change_number === 1 ? ((o3text === o1text || o3text === o2text) && (o3imi === o1imi || o3imi === o2imi) : (o3text === o1text || o3text === o2text)) {
               option_number = Math.floor(Math.random() * option_words.length);
               o3text = option_words[option_number][change_number];
               if (change_number === 1) {
@@ -686,7 +686,7 @@
             if (change_number === 1) {
               o2imi = option_words[option_number][2];
             }
-            while (o2text === o1text || o2text === o3text) {
+            while (change_number === 1 ? ((o2text === o1text || o3text === o2text) && (o2imi === o1imi || o3imi === o2imi) : (o2text === o1text || o3text === o2text)) {
               option_number = Math.floor(Math.random() * option_words.length);
               o2text = option_words[option_number][change_number];
               if (change_number === 1) {
@@ -727,7 +727,7 @@
             if (change_number === 1) {
               o2imi = option_words[option_number][2];
             }
-            while (o2text === o1text || o2text === o4text) {
+            while (change_number === 1 ? ((o2text === o1text || o4text === o2text) && (o2imi === o1imi || o4imi === o2imi) : (o2text === o1text || o4text === o2text)) {
               option_number = Math.floor(Math.random() * option_words.length);
               o2text = option_words[option_number][change_number];
               if (change_number === 1) {
