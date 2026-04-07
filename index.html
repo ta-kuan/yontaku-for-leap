@@ -546,6 +546,10 @@
       let o2text = "";
       let o3text = "";
       let o4text = "";
+      let o1imi = "";
+      let o2imi = "";
+      let o3imi = "";
+      let o4imi = "";
       range_start.value = 1;
       range_end.value = 1400;
       option_start.value = 1;
@@ -582,11 +586,18 @@
         switch (answer_number) {
           case 0:
             o1text = question_words[question_number][change_number];
+            if (change_number === 1) o1imi = question_words[question_number][2];
             option_number = Math.floor(Math.random() * option_words.length);
             o2text = option_words[option_number][change_number];
-            while (o2text === o1text) {
+            if (change_number === 1) {
+              o2timi = option_words[option_number][2];
+            }
+            while (change_number === 1 ? (o2text === o1text && o2imi === o1imi) : o2text === o1text) {
               option_number = Math.floor(Math.random() * option_words.length);
               o2text = option_words[option_number][change_number];
+              if (change_number === 1) {
+                o2imi = option_words[option_number][2];
+              }
             }
             option_number = Math.floor(Math.random() * option_words.length);
             o3text = option_words[option_number][change_number];
