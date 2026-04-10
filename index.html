@@ -603,9 +603,9 @@
       let o3imi = "";
       let o4imi = "";
       range_start.value = 1;
-      range_end.value = 1400;
+      range_end.value = words.length;
       option_start.value = 1;
-      option_end.value = 1400;
+      option_end.value = words.length;
       let old_range_start = range_start.value;
       let old_range_end = range_end.value;
       let old_option_start = option_start.value;
@@ -619,6 +619,7 @@
       const range_select = document.querySelector(".range_select");
       const option_select = document.querySelector(".option_select");
       const mondaisu = document.querySelector(".mondaisu");
+      mondaisu.value = words.length;
       
       function setquestion() {
         resultG.classList.add("off");
