@@ -997,7 +997,7 @@
         }
       });
       mondaisu.addEventListener('change', (event) => {
-        if (mondaisu.value > range_end.value - range_start.value + 1 || mondaisu.value > 0) {
+        if (mondaisu.value > range_end.value - range_start.value + 1 || mondaisu.value <= 0) {
           mondaisu.value = old_mondaisu;
           alert("出題数以下("+ (range_end.value - range_start.value + 1) +")の自然数にしてください");
         } else {
