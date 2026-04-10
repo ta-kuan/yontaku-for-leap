@@ -611,6 +611,7 @@
       let rate = 0;
       const range_select = document.querySelector(".range_select");
       const option_select = document.querySelector(".option_select");
+      const mondaisu = document.querySelector(".mondaisu");
       
       function setquestion() {
         resultG.classList.add("off");
@@ -963,7 +964,7 @@
         o4.classList.remove("mback");
         o4.classList.remove("bback");
         question_words.splice(question_number, 1);
-        if (question_words.length === 0) {
+        if (answer_number === mondaisu.value) {
           if (next.textContent === "最初から") {
             next.classList.add("notclick");
             o1.classList.remove("notclick");
