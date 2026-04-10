@@ -851,6 +851,98 @@
       document.addEventListener('keydown', (event) => {
         if (event.key === 'm' || event.key === 'M') {
           menuG.classList.toggle("slide");
+        } else if (event.key === "1" ||event.key === "2" ||event.key === "3" ||event.key === "4") {
+          setmaru();
+        if (answer_number !== 0) {
+          b1.classList.remove("off");
+          mistakes_words[mistakes_quantity] = question_words[question_number];
+          mistakes_quantity += 1;
+          o1.classList.add("bback");
+        } else if (answer_number !== 1) {
+          b2.classList.remove("off");
+          mistakes_words[mistakes_quantity] = question_words[question_number];
+          mistakes_quantity += 1;
+          o2.classList.add("bback");
+        } else if (answer_number !== 2) {
+          b3.classList.remove("off");
+          mistakes_words[mistakes_quantity] = question_words[question_number];
+          mistakes_quantity += 1;
+          o3.classList.add("bback");
+        } else if (answer_number !== 3) {
+          b4.classList.remove("off");
+          mistakes_words[mistakes_quantity] = question_words[question_number];
+          mistakes_quantity += 1;
+          o4.classList.add("bback");
+        }
+          answered_number += 1;
+          next.classList.remove("notclick");
+          o1.classList.add("notclick");
+          o2.classList.add("notclick");
+          o3.classList.add("notclick");
+          o4.classList.add("notclick");
+        } else if (event.key === "Enter") {
+          m1.classList.add("off");
+          b1.classList.add("off");
+          m2.classList.add("off");
+          b2.classList.add("off");
+          m3.classList.add("off");
+          b3.classList.add("off");
+          m4.classList.add("off");
+          b4.classList.add("off");
+          o1.classList.remove("mback");
+          o1.classList.remove("bback");
+          o2.classList.remove("mback");
+          o2.classList.remove("bback");
+          o3.classList.remove("mback");
+          o3.classList.remove("bback");
+          o4.classList.remove("mback");
+          o4.classList.remove("bback");
+          question_words.splice(question_number, 1);
+          if (answer_number === mondaisu.value) {
+            if (next.textContent === "最初から") {
+              next.classList.add("notclick");
+              o1.classList.remove("notclick");
+              o2.classList.remove("notclick");
+              o3.classList.remove("notclick");
+              o4.classList.remove("notclick");
+              miss.classList.add("off");
+              answered_number = 0;
+              next.textContent = "次へ";
+              startquestion();
+            } else {
+              next.textContent = "最初から";
+              rate = 100 - Math.round(mistakes_quantity / answered_number * 100);
+              ratem.textContent = rate + "%";
+              resultG.classList.remove("off");
+              if (mistakes_words.length !== 0) {
+                miss.classList.remove("off");
+              }
+              mondai1.textContent = "";
+              mondai2.textContent = "";
+              number.textContent = "";
+            }
+            next.classList.remove("notclick");
+          } else {
+            next.classList.add("notclick");
+            o1.classList.remove("notclick");
+            o2.classList.remove("notclick");
+            o3.classList.remove("notclick");
+            o4.classList.remove("notclick");
+            setquestion();
+          }
+        } else if (event.key === "r" || event.key === "R") {
+          miss.classList.add("off");
+          question_words = [...mistakes_words];
+          next.textContent = "次";
+          mistakes_words = [];
+          mistakes_quantity = 0;
+          answered_number = 0;
+          next.classList.add("notclick");
+          o1.classList.remove("notclick");
+          o2.classList.remove("notclick");
+          o3.classList.remove("notclick");
+          o4.classList.remove("notclick");
+          setquestion();
         }
       });
       range_start.addEventListener('change', (event) => {
