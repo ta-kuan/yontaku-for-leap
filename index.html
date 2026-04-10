@@ -603,7 +603,6 @@
       const b3 = document.querySelector('.b3');
       const b4 = document.querySelector('.b4');
       const change = document.querySelector('.change');
-      const haschange = change.classList.contains("switch1");
       let question_words = [];
       let option_words = [];
       let mistakes_words = [];
@@ -672,7 +671,7 @@
           d8: old_option_start,
           d9: option_end.value,
           d10: old_option_end,
-          d11: haschange,
+          d11: change.classList.contains("switch1"),
           d12: mondaisu.value,
           d13: old_mondaisu,
         };
