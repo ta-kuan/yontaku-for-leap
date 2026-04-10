@@ -1028,7 +1028,7 @@
         if (option_start.value <= 0 || option_start.value > words.length) {
           option_start.value = old_option_start;
           alert("1~"+words.length+"の値にしてください");
-        } else if (option_end.value - option_start.value >= 3) {
+        } else if (option_end.value - option_start.value <= 2) {
           option_start.value = old_option_start;
           alert("選択肢範囲は4つ以上にしてください");
         } else {
@@ -1042,7 +1042,7 @@
         if (option_end.value <= 0 || option_end.value > words.length) {
           option_end.value = old_option_end;
           alert("1~"+words.length+"の値にしてください");
-        } else if (option_end.value - option_start.value >= 3) {
+        } else if (option_end.value - option_start.value <= 2) {
           option_start.value = old_option_start;
           alert("選択肢範囲4つ以上にしてください");
         } else {
