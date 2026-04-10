@@ -605,6 +605,7 @@
       const b3 = document.querySelector('.b3');
       const b4 = document.querySelector('.b4');
       const change = document.querySelector('.change');
+      const haschange = change.classList.contains("switch1");
       let question_words = [];
       let option_words = [];
       let mistakes_words = [];
@@ -640,7 +641,40 @@
       const option_select = document.querySelector(".option_select");
       const mondaisu = document.querySelector(".mondaisu");
       mondaisu.value = words.length;
-      let old_mondaisu = mondaisu.valuezz;
+      let old_mondaisu = mondaisu.value;
+      const data = {
+        d1: range_select.value,
+        d2: range_start.value,
+        d3: old_range_start,
+        d4: range_end.value,
+        d5: old_range_end,
+        d6: option_select.value,
+        d7: option_start.value,
+        d8: old_option_start,
+        d9: option_end.value,
+        d10: old_option_end,
+        d11: hasswitch1,
+        d12: mondaisu.value,
+        d13: old_mondaisu,
+      };
+      const saved = JSON.parse(localStorage.getItem("input_data") || "{}");
+      range_select.value = saved.d1 || "ALL";
+      range_start.value = saved.d2 || 1;
+      old_range_start = Number(saved.d3) || range_start.value;
+      range_end.value = saved.d4 || words.length;
+      old_range_end = Number(saved.d5) || range_end.value;
+      option_select.value = saved.d6 || "ALL";
+      option_start.value = saved.d7 || 1;
+      old_option_start = Number(saved.d8) || option_start.value;
+      option_end.value = saved.d9 || words.length;
+      old_option_end = Number(saved.d10) || option_end.value;
+      if ((saved.d11 === true || saved.d11 === "true")) {
+        change.classList.add("switch1");
+      } else {
+        change.classList.remove("switch1");
+      }
+      mondaisu.value = saved.d12 || words.length;
+      old_mondaisu = Number(saved.d13) || mondaisu.value;
       
       function setquestion() {
         resultG.classList.add("off");
@@ -977,6 +1011,7 @@
           old_mondaisu = mondaisu.value;
           startquestion();
         }
+        localStorage.setItem("input_data", JSON.stringify(data));
       });
       range_end.addEventListener('change', (event) => {
         if (range_end.value <= 0 || range_end.value > words.length) {
@@ -989,6 +1024,7 @@
           old_mondaisu = mondaisu.value;
           startquestion();
         }
+        localStorage.setItem("input_data", JSON.stringify(data));
       });
       option_start.addEventListener('change', (event) => {
         if (option_start.value <= 0 || option_start.value > words.length) {
@@ -1002,6 +1038,7 @@
           answered_number = 0;
           startquestion();
         }
+        localStorage.setItem("input_data", JSON.stringify(data));
       });
       option_end.addEventListener('change', (event) => {
         if (option_end.value <= 0 || option_end.value > words.length) {
@@ -1015,6 +1052,7 @@
           answered_number = 0;
           startquestion();
         }
+        localStorage.setItem("input_data", JSON.stringify(data));
       });
       mondaisu.addEventListener('change', (event) => {
         if (mondaisu.value > range_end.value - range_start.value + 1 || mondaisu.value <= 0) {
@@ -1024,6 +1062,7 @@
           old_mondaisu = mondaisu.value;
           startquestion();
         }
+        localStorage.setItem("input_data", JSON.stringify(data));
       });
       o1.addEventListener('click', () => {
         setmaru();
@@ -1182,6 +1221,7 @@
         o4.classList.remove("bback");
         miss.classList.add("off");
         next.textContent = "次へ";
+        localStorage.setItem("input_data", JSON.stringify(data));
         startquestion();
       });
       range_select.addEventListener("change", () => {
@@ -1295,6 +1335,7 @@
           option_start.value = 1506;
           option_end.value = 1600;
         }
+        localStorage.setItem("input_data", JSON.stringify(data));
         startquestion();
       });
       option_select.addEventListener("change", () => {
@@ -1398,6 +1439,7 @@
           option_start.value = 1;
           option_end.value = 1000;
         }
+        localStorage.setItem("input_data", JSON.stringify(data));
         startquestion();
       });
       startquestion();
