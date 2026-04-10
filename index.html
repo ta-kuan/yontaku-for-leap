@@ -655,7 +655,7 @@
         d12: mondaisu.value,
         d13: old_mondaisu,
       };
-      const saved = JSON.parse(localStorage.getItem("input_data") || "{}");
+      const saved = JSON.parse(localStorage.getItem("data") || "{}");
       range_select.value = saved.d1 || "ALL";
       option_select.value = saved.d6 || "ALL";
       range_start.value = Number(saved.d2) || 1;
