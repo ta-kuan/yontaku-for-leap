@@ -620,6 +620,7 @@
       const option_select = document.querySelector(".option_select");
       const mondaisu = document.querySelector(".mondaisu");
       mondaisu.value = words.length;
+      let old_mondaisu = mondaisu.value;
       
       function setquestion() {
         resultG.classList.add("off");
@@ -952,6 +953,7 @@
         } else {
           old_range_start = range_start.value;
           answered_number = 0;
+          mondaisu.value = range_end.value - range_start.value + 1;
           startquestion();
         }
       });
@@ -962,6 +964,7 @@
         } else {
           old_range_end = range_end.value;
           answered_number = 0;
+          mondaisu.value = range_end.value - range_start.value + 1;
           startquestion();
         }
       });
@@ -988,6 +991,15 @@
         } else {
           old_option_end = option_end.value;
           answered_number = 0;
+          startquestion();
+        }
+      });
+      mondaisu.addEventListener('change', (event) => {
+        if (option_end.value <= 0 || option_end.value > words.length) {
+          mondaisu.value = old_mondaisu;
+          alert("出題数以下("+ (range_end.value - range_start.value + 1) +")にしてください");
+        } else {
+          old_mondaisu = mondaisu.value;
           startquestion();
         }
       });
