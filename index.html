@@ -852,7 +852,7 @@
         if (event.key === 'm' || event.key === 'M') {
           menuG.classList.toggle("slide");
         }
-      }
+      });
       range_start.addEventListener('change', (event) => {
         if (range_start.value <= 0 || range_start.value > words.length) {
           range_start.value = old_range_start;
