@@ -444,6 +444,8 @@
         <div class="rangeset">
           <div class="rangem"></div>
           <select class="range_select">
+            <option>4/20~</option>
+            <option>4/27~</option>
             <option>ALL</option>
             <option>P1:Week1</option>
             <option>P1:Week2</option>
@@ -478,6 +480,8 @@
         <div class="optionset">
           <div class="optionm"></div>
           <select class="option_select">
+            <option>4/20~</option>
+            <option>4/27~</option>
             <option>ALL</option>
             <option>P1:Week1</option>
             <option>P1:Week2</option>
@@ -1266,6 +1270,16 @@
         } else if (range_select.value === "ALL") {
           range_start.value = 1;
           range_end.value = 1400;
+        } else if (range_select.value === "4/20~") {
+          range_start.value = 1401;
+          range_end.value = 1505;
+          option_start.value = 1401;
+          option_end.value = 1505;
+        } else if (range_select.value === "4/27~") {
+          range_start.value = 1506;
+          range_end.value = 1600;
+          option_start.value = 1506;
+          option_end.value = 1600;
         }
         startquestion();
       });
