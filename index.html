@@ -641,8 +641,8 @@
       let old_mondaisu = mondaisu.value;
       const saved = JSON.parse(localStorage.getItem("data") || "{}");
       
-      range_select.value = saved.d1 ?? "ALL";
-      option_select.value = saved.d6 ?? "ALL";
+      range_select.selectedIndex = Number(saved.d1) ?? 0;
+      option_select.selectedIndex = Number(saved.d6) ?? 0;
       range_start.value = Number(saved.d2) || 1;
       old_range_start = Number(saved.d3) || range_start.value;
       range_end.value = Number(saved.d4) || words.length;
@@ -662,12 +662,12 @@
 
       function savedata() {
         const data = {
-          d1: range_select.value,
+          d1: range_select.selectedIndex,
           d2: range_start.value,
           d3: old_range_start,
           d4: range_end.value,
           d5: old_range_end,
-          d6: option_select.value,
+          d6: option_select.selectedIndex,
           d7: option_start.value,
           d8: old_option_start,
           d9: option_end.value,
