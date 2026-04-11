@@ -641,7 +641,6 @@
       let old_mondaisu = mondaisu.value;
       const saved = JSON.parse(localStorage.getItem("data") || "{}");
       
-      localStorage.removeItem("data");
       range_select.value = saved.d1 ?? "ALL";
       option_select.value = saved.d6 ?? "ALL";
       range_start.value = Number(saved.d2) ?? 1;
@@ -1446,7 +1445,6 @@
         savedata();
         startquestion();
       });
-      localStorage.removeItem("data");
       startquestion();
     </script>
   </body>
