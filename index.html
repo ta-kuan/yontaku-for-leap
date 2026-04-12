@@ -871,7 +871,7 @@
         question_words = [];
         option_words = [];
         question_range = Number(range_end.value) - Number(range_start.value) + 1;
-        for (let i = 0;i < mondaisu.value;i ++) {
+        for (let i = 0;i < question_range;i ++) {
           question_words[i] = words[Number(range_start.value) + i - 1];
         }
         option_range = Number(option_end.value) - Number(option_start.value) + 1;
@@ -1145,7 +1145,7 @@
         o4.classList.remove("mback");
         o4.classList.remove("bback");
         question_words.splice(question_number, 1);
-        if (answer_number === mondaisu.value) {
+        if (answered_number === mondaisu.value) {
           if (next.textContent === "最初から") {
             next.classList.add("notclick");
             o1.classList.remove("notclick");
