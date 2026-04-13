@@ -650,14 +650,18 @@
       let old_mondaisu = mondaisu.value;
       const saved = JSON.parse(localStorage.getItem("data") || "{}");
       let startTime = null;
+      let endTime = null;
+      let elapsed = 0;
+      let seconds = 0;
+      let minutes = 0;
       function startTimer() {
         startTime = Date.now();
       }
       function endTimer() {
-        const endTime = Date.now();
-        const elapsed = endTime - startTime;
-        const seconds = Math.floor(elapsed / 1000);
-        const minutes = Math.floor(seconds / 60);
+        endTime = Date.now();
+        elapsed = endTime - startTime;
+        seconds = Math.floor(elapsed / 1000);
+        minutes = Math.floor(seconds / 60);
       }
       
       range_select.selectedIndex = Number(saved.d1) ?? 0;
