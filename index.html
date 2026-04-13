@@ -935,7 +935,7 @@
       document.addEventListener('keydown', (event) => {
         if (event.key === 'm' || event.key === 'M') {
           menuG.classList.toggle("slide");
-        } else if (event.key === "1" ||event.key === "2" ||event.key === "3" ||event.key === "4") {
+        } else if ((event.key === "1" || event.key === "2" || event.key === "3" || event.key === "4") && !o1.classList.contains("notclick")) {
           setmaru();
           if (answer_number !== 0) {
             b1.classList.remove("off");
@@ -964,7 +964,7 @@
           o2.classList.add("notclick");
           o3.classList.add("notclick");
           o4.classList.add("notclick");
-        } else if (event.key === "Enter") {
+        } else if (event.key === "Enter" && !next.classList.contains("notclick")) {
           m1.classList.add("off");
           b1.classList.add("off");
           m2.classList.add("off");
@@ -1014,7 +1014,7 @@
             o4.classList.remove("notclick");
             setquestion();
           }
-        } else if (event.key === "r" || event.key === "R") {
+        } else if ((event.key === "r" || event.key === "R") && !miss.classList.contains("off")) {
           miss.classList.add("off");
           question_words = [...mistakes_words];
           next.textContent = "次";
