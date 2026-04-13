@@ -224,6 +224,13 @@
         transform: translate(-50%, -30%);
         font-size: 180%;
       }
+      .timem {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 180%;
+      }
       .rangeset {
         position: absolute;
         left: 50%;
@@ -568,7 +575,8 @@
         </div>
       </div>
       <div class="resultG off">
-        <span class="ratem">50%</span>
+        <span class="ratem"></span>
+        <span class="timem"></span>
       </div>
       <div class="menuGkakusi"></div>
     </div>
@@ -640,6 +648,17 @@
       mondaisu.value = words.length;
       let old_mondaisu = mondaisu.value;
       const saved = JSON.parse(localStorage.getItem("data") || "{}");
+      let startTime = null;
+      function startTimer() {
+        startTime = Date.now();
+      }
+      function endTimer() {
+        const endTime = Date.now();
+        const elapsed = endTime - startTime;
+        const seconds = Math.floor(elapsed / 1000);
+        const minutes = Math.floor(seconds / 60);
+        console.log(`経過時間: ${minutes}分 ${seconds % 60}秒`);
+      }
       
       range_select.selectedIndex = Number(saved.d1) ?? 0;
       option_select.selectedIndex = Number(saved.d6) ?? 0;
@@ -882,6 +901,7 @@
         mistakes_quantity = 0;
         answered_number = 0;
         setquestion();
+        startTimer();
       }
       function setmaru() {
         switch(m) {
@@ -1157,6 +1177,7 @@
             next.textContent = "次へ";
             startquestion();
           } else {
+            endTimer();
             next.textContent = "最初から";
             rate = 100 - Math.round(mistakes_quantity / answered_number * 100);
             ratem.textContent = rate + "%";
