@@ -935,24 +935,48 @@
       document.addEventListener('keydown', (event) => {
         if (event.key === 'm' || event.key === 'M') {
           menuG.classList.toggle("slide");
-        } else if ((event.key === "1" || event.key === "2" || event.key === "3" || event.key === "4") && !o1.classList.contains("notclick")) {
+        } else if (event.key === "1" && !o1.classList.contains("notclick")) {
           setmaru();
           if (answer_number !== 0) {
             b1.classList.remove("off");
             mistakes_words[mistakes_quantity] = question_words[question_number];
             mistakes_quantity += 1;
             o1.classList.add("bback");
-          } else if (answer_number !== 1) {
+          }
+          answered_number += 1;
+          next.classList.remove("notclick");
+          o1.classList.add("notclick");
+          o2.classList.add("notclick");
+          o3.classList.add("notclick");
+          o4.classList.add("notclick");
+        } else if (event.key === "2" && !o2.classList.contains("notclick")) {
+          if (answer_number !== 1) {
             b2.classList.remove("off");
             mistakes_words[mistakes_quantity] = question_words[question_number];
             mistakes_quantity += 1;
             o2.classList.add("bback");
-          } else if (answer_number !== 2) {
+          }
+          answered_number += 1;
+          next.classList.remove("notclick");
+          o1.classList.add("notclick");
+          o2.classList.add("notclick");
+          o3.classList.add("notclick");
+          o4.classList.add("notclick");
+        } else if (event.key === "3" && !o3.classList.contains("notclick")) {
+          if (answer_number !== 2) {
             b3.classList.remove("off");
             mistakes_words[mistakes_quantity] = question_words[question_number];
             mistakes_quantity += 1;
             o3.classList.add("bback");
-          } else if (answer_number !== 3) {
+          }
+          answered_number += 1;
+          next.classList.remove("notclick");
+          o1.classList.add("notclick");
+          o2.classList.add("notclick");
+          o3.classList.add("notclick");
+          o4.classList.add("notclick");
+        } else if (event.key === "4" && !o4.classList.contains("notclick"))
+          if (answer_number !== 3) {
             b4.classList.remove("off");
             mistakes_words[mistakes_quantity] = question_words[question_number];
             mistakes_quantity += 1;
