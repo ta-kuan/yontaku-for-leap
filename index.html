@@ -715,9 +715,9 @@
         } else {
           mondai1.textContent = "① " + question_words[question_number][2];
           if (question_words[question_number][3] === "") {
-            mondai2.textContent = "② " + question_words[question_number][3];
+            mondai2.textContent = "";
           } else {
-            mondai2.textContent = question_words[question_number][3];
+            mondai2.textContent = "② " + question_words[question_number][3];
           }
         }
         answer_number = Math.floor(Math.random() * 4);
