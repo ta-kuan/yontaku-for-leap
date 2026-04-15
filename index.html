@@ -1034,9 +1034,11 @@
               next.textContent = "次へ";
               startquestion();
             } else {
+              endTimer();
               next.textContent = "最初から";
               rate = 100 - Math.round(mistakes_quantity / answered_number * 100);
-              ratem.textContent = rate + "%";
+              ratem.textContent = "　正答率:　" + `${rate}%`;
+              timem.textContent = "経過時間:　" + `${minutes}:${seconds % 60}`;
               resultG.classList.remove("off");
               if (mistakes_words.length !== 0) {
                 miss.classList.remove("off");
