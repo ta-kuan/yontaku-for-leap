@@ -26,6 +26,9 @@
         color: rgb(0,0,0);
         touch-action: manipulation;
       }
+      .push {
+        cursor
+      }
       .off {
         display: none !important;
       }
@@ -454,11 +457,11 @@
   </head>
   <body>
     <div class="all">
-      <button class="menu">
+      <div class="menu push">
         <div class="me1"></div>
         <div class="me2"></div>
         <div class="me3"></div>
-      </button>
+      </div>
       <div class="menuG slide">
         <div class="rangeset">
           <div class="rangem"></div>
@@ -561,29 +564,29 @@
       <div class="mondai1"></div>
       <div class="mondai2"></div>
       <div class="options">
-        <button class="o1" id="o1i">
+        <div class="o1 push" id="o1i">
           <span class="o1m"></span>
           <img src="maru.png" for="o1i" class="maru m1 off">
           <img src="batu.png" for="o1i" class="batu b1 off">
-        </button>
-        <button class="o2" id="o2i">
+        </div>
+        <div class="o2 push" id="o2i">
           <span class="o2m"></span>
           <img src="maru.png" for="o2i" class="maru m2 off">
           <img src="batu.png" for="o2i" class="batu b2 off">
-        </button>
-        <button class="o3" id="o3i">
+        </div>
+        <div class="o3 push" id="o3i">
           <span class="o3m"></span>
           <img src="maru.png" for="o3i" class="maru m3 off">
           <img src="batu.png" for="o3i" class="batu b3 off">
-        </button>
-        <button class="o4" id="o4i">
+        </div>
+        <div class="o4 push" id="o4i">
           <span class="o4m"></span>
           <img src="maru.png" for="o4i" class="maru m4 off">
           <img src="batu.png" for="o4i" class="batu b4 off">
-        </button>
+        </div>
         <div class="buttons">
-          <button class="next">次へ</button>
-          <button class="miss off">間違えた問題を やり直す</button>
+          <div class="next push">次へ</div>
+          <div class="miss off">間違えた問題を やり直す</div>
         </div>
       </div>
       <div class="resultG off">
