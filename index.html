@@ -962,6 +962,7 @@
           o3.classList.add("notclick");
           o4.classList.add("notclick");
         } else if (event.key === "2" && !o2.classList.contains("notclick")) {
+          setmaru();
           if (answer_number !== 1) {
             b2.classList.remove("off");
             mistakes_words[mistakes_quantity] = question_words[question_number];
@@ -975,6 +976,7 @@
           o3.classList.add("notclick");
           o4.classList.add("notclick");
         } else if (event.key === "3" && !o3.classList.contains("notclick")) {
+          setmaru();
           if (answer_number !== 2) {
             b3.classList.remove("off");
             mistakes_words[mistakes_quantity] = question_words[question_number];
@@ -988,6 +990,7 @@
           o3.classList.add("notclick");
           o4.classList.add("notclick");
         } else if (event.key === "4" && !o4.classList.contains("notclick")) {
+          setmaru();
           if (answer_number !== 3) {
             b4.classList.remove("off");
             mistakes_words[mistakes_quantity] = question_words[question_number];
@@ -1018,7 +1021,7 @@
           o4.classList.remove("mback");
           o4.classList.remove("bback");
           question_words.splice(question_number, 1);
-          if (answer_number === mondaisu.value) {
+          if (answered_number === Number(mondaisu.value)) {
             if (next.textContent === "最初から") {
               next.classList.add("notclick");
               o1.classList.remove("notclick");
