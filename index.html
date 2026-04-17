@@ -1302,6 +1302,7 @@
             miss.classList.add("off");
             answered_number = 0;
             next.textContent = "次へ";
+            keika.classList.remove("off");
             startquestion();
           } else {
             endTimer();
@@ -1312,6 +1313,7 @@
             resultG.classList.remove("off");
             if (mistakes_words.length !== 0) {
               miss.classList.remove("off");
+              keika.classList.add("off");
             }
             mondai1.textContent = "";
             mondai2.textContent = "";
