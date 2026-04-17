@@ -941,7 +941,7 @@
         mistakes_words = [];
         mistakes_quantity = 0;
         answered_number = 0;
-        keika.textContent = 1 + " / " + mondaisu.value;
+        keika.textContent = (nom === 0 ? 1 + " / " + mondaisu.value : 1 + " / " + (question_words.length + answered_number);
         setquestion();
         startTimer();
       }
