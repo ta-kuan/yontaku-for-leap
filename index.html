@@ -1060,7 +1060,7 @@
           o4.classList.remove("mback");
           o4.classList.remove("bback");
           question_words.splice(question_number, 1);
-          if (answered_number === Number(mondaisu.value)) {
+          if (answered_number === (nom === 0 ? Number(mondaisu.value) : question_words.length)) {
             if (next.textContent === "最初から") {
               next.classList.add("notclick");
               o1.classList.remove("notclick");
@@ -1292,7 +1292,7 @@
         o4.classList.remove("mback");
         o4.classList.remove("bback");
         question_words.splice(question_number, 1);
-        if (answered_number === (nom === 0 ? Number(mondaisu.value) : mistakes_words.length)) {
+        if (answered_number === (nom === 0 ? Number(mondaisu.value) : question_words.length)) {
           if (next.textContent === "最初から") {
             next.classList.add("notclick");
             o1.classList.remove("notclick");
@@ -1341,7 +1341,7 @@
         o2.classList.remove("notclick");
         o3.classList.remove("notclick");
         o4.classList.remove("notclick");
-        keika.textContent = 1 + " / " + mistakes_words.length;
+        keika.textContent = 1 + " / " + question_words.length;
         setquestion();
       });
       change.addEventListener('click', () => {
