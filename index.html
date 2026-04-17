@@ -1082,6 +1082,14 @@
           range_start.value = old_range_start;
           alert("1~"+words.length+"の値にしてください");
         } else {
+          next.classList.add("notclick");
+          o1.classList.remove("notclick");
+          o2.classList.remove("notclick");
+          o3.classList.remove("notclick");
+          o4.classList.remove("notclick");
+          miss.classList.add("off");
+          answered_number = 0;
+          next.textContent = "次へ";
           old_range_start = range_start.value;
           answered_number = 0;
           mondaisu.value = range_end.value - range_start.value + 1;
@@ -1095,6 +1103,14 @@
           range_end.value = old_range_end;
           alert("1~"+words.length+"の値にしてください");
         } else {
+          next.classList.add("notclick");
+          o1.classList.remove("notclick");
+          o2.classList.remove("notclick");
+          o3.classList.remove("notclick");
+          o4.classList.remove("notclick");
+          miss.classList.add("off");
+          answered_number = 0;
+          next.textContent = "次へ";
           old_range_end = range_end.value;
           answered_number = 0;
           mondaisu.value = range_end.value - range_start.value + 1;
@@ -1111,6 +1127,14 @@
           option_start.value = old_option_start;
           alert("選択肢範囲は4つ以上にしてください");
         } else {
+          next.classList.add("notclick");
+          o1.classList.remove("notclick");
+          o2.classList.remove("notclick");
+          o3.classList.remove("notclick");
+          o4.classList.remove("notclick");
+          miss.classList.add("off");
+          answered_number = 0;
+          next.textContent = "次へ";
           old_option_start = option_start.value;
           answered_number = 0;
           startquestion();
@@ -1125,6 +1149,14 @@
           option_start.value = old_option_start;
           alert("選択肢範囲4つ以上にしてください");
         } else {
+          next.classList.add("notclick");
+          o1.classList.remove("notclick");
+          o2.classList.remove("notclick");
+          o3.classList.remove("notclick");
+          o4.classList.remove("notclick");
+          miss.classList.add("off");
+          answered_number = 0;
+          next.textContent = "次へ";
           old_option_end = option_end.value;
           answered_number = 0;
           startquestion();
@@ -1136,6 +1168,14 @@
           mondaisu.value = old_mondaisu;
           alert("出題数以下("+ (range_end.value - range_start.value + 1) +")の自然数にしてください");
         } else {
+          next.classList.add("notclick");
+          o1.classList.remove("notclick");
+          o2.classList.remove("notclick");
+          o3.classList.remove("notclick");
+          o4.classList.remove("notclick");
+          miss.classList.add("off");
+          answered_number = 0;
+          next.textContent = "次へ";
           old_mondaisu = mondaisu.value;
           startquestion();
         }
@@ -1301,6 +1341,7 @@
         o4.classList.remove("bback");
         miss.classList.add("off");
         next.textContent = "次へ";
+        answered_number = 0;
         savedata();
         startquestion();
       });
@@ -1415,6 +1456,14 @@
           option_start.value = 1506;
           option_end.value = 1600;
         }
+        next.classList.add("notclick");
+        o1.classList.remove("notclick");
+        o2.classList.remove("notclick");
+        o3.classList.remove("notclick");
+        o4.classList.remove("notclick");
+        miss.classList.add("off");
+        answered_number = 0;
+        next.textContent = "次へ";
         mondaisu.value = Number(range_end.value) - Number(range_start.value) + 1;
         savedata();
         startquestion();
@@ -1520,6 +1569,14 @@
           option_start.value = 1;
           option_end.value = 1400;
         }
+        next.classList.add("notclick");
+        o1.classList.remove("notclick");
+        o2.classList.remove("notclick");
+        o3.classList.remove("notclick");
+        o4.classList.remove("notclick");
+        miss.classList.add("off");
+        answered_number = 0;
+        next.textContent = "次へ";
         savedata();
         startquestion();
       });
