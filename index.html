@@ -1332,6 +1332,7 @@
       });
       miss.addEventListener('click', () => {
         miss.classList.add("off");
+        keika.classList.remove("off");
         question_words = [...mistakes_words];
         next.textContent = "次";
         mistakes_words = [];
