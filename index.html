@@ -941,7 +941,7 @@
         mistakes_words = [];
         mistakes_quantity = 0;
         answered_number = 0;
-        keika.textContent = (nom === 0 ? 1 + " / " + mondaisu.value : 1 + " / " + (question_words.length + answered_number);
+        keika.textContent = 1 + " / " + mondaisu.value;
         setquestion();
         startTimer();
       }
@@ -1087,7 +1087,7 @@
             }
             next.classList.remove("notclick");
           } else {
-            keika.textContent = (answered_number + 1) + " / " + mondaisu.value;
+            keika.textContent = (answered_number + 1) + " / " + (nom === 0 ? mondaisu.value : (question_words.length + answered_number);
             next.classList.add("notclick");
             o1.classList.remove("notclick");
             o2.classList.remove("notclick");
@@ -1292,7 +1292,7 @@
         o4.classList.remove("mback");
         o4.classList.remove("bback");
         question_words.splice(question_number, 1);
-        if (answered_number === (nom === 0 ? Number(mondaisu.value) : question_words.length)) {
+        if ((nom === 0 ? (answered_number === Number(mondaisu.value)) : (question_words.length === 0))) {
           if (next.textContent === "最初から") {
             next.classList.add("notclick");
             o1.classList.remove("notclick");
@@ -1319,7 +1319,7 @@
           }
           next.classList.remove("notclick");
         } else {
-          keika.textContent = (answered_number + 1) + " / " + mondaisu.value;
+          keika.textContent = (answered_number + 1) + " / " + (nom === 0 ? mondaisu.value : (question_words.length + answered_number);
           next.classList.add("notclick");
           o1.classList.remove("notclick");
           o2.classList.remove("notclick");
