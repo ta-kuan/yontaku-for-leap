@@ -468,8 +468,8 @@
         <div class="rangeset">
           <div class="rangem"></div>
           <select name="menu_input" class="range_select push">
-            <option>4/20~</option>
             <option>4/27~</option>
+            <option>5/11~</option>
             <option>ALL</option>
             <option>P1:Week1</option>
             <option>P1:Week2</option>
@@ -1484,16 +1484,16 @@
         } else if (range_select.value === "ALL") {
           range_start.value = 1;
           range_end.value = 1400;
-        } else if (range_select.value === "4/20~") {
-          range_start.value = 1401;
-          range_end.value = 1505;
-          option_start.value = 1401;
-          option_end.value = 1505;
         } else if (range_select.value === "4/27~") {
           range_start.value = 1506;
           range_end.value = 1600;
           option_start.value = 1506;
           option_end.value = 1600;
+        } else if (range_select.value === "5/11~") {
+          range_start.value = 1601;
+          range_end.value = 1705;
+          option_start.value = 1601;
+          option_end.value = 1705;
         }
         next.classList.add("notclick");
         o1.classList.remove("notclick");
