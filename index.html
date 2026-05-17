@@ -1625,6 +1625,10 @@
         savedata();
         startquestion();
       });
+      range_start.dispatchEvent(new Event('change'));
+      range_end.dispatchEvent(new Event('change'));
+      option_start.dispatchEvent(new Event('change'));
+      option_end.dispatchEvent(new Event('change'));
       startquestion();
     </script>
   </body>
