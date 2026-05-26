@@ -736,9 +736,20 @@
         question_number = Math.floor(Math.random() * question_words.length);
         number.textContent = question_words[question_number][0];
         if (change.classList.contains("switch1")) {
+          mondai1.style.fontSize = "200%";
           mondai1.textContent = question_words[question_number][1];
           mondai2.textContent = "";
         } else {
+          if (question_words[question_number][2].length > question_words[question_number][3].length) {
+            mondai1.style.fontSize = fontsize(question_words[question_number][2]);
+            mondai2.style.fontSize = fontsize(question_words[question_number][2]);
+          } else if (question_words[question_number][2].length < question_words[question_number][3].length) {
+            mondai1.style.fontSize = fontsize(question_words[question_number][3]);
+            mondai2.style.fontSize = fontsize(question_words[question_number][3]);
+          } else {
+            mondai1.style.fontSize = fontsize(question_words[question_number][2]);
+            mondai2.style.fontSize = fontsize(question_words[question_number][3]);
+          }
           mondai1.textContent = "① " + question_words[question_number][2];
           if (question_words[question_number][3] === "") {
             mondai2.textContent = "";
