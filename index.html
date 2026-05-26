@@ -512,6 +512,8 @@
         <div class="optionset">
           <div class="optionm"></div>
           <select name="menu_input" class="option_select push">
+            <option>6/1~</option>
+            <option>6/9~</option>
             <option>ALL</option>
             <option>P1:Week1</option>
             <option>P1:Week2</option>
@@ -730,7 +732,7 @@
         } else if (l.length < 16) {
           return "160%";
         } else {
-          return "125%";
+          return "120%";
         }
       }
       function setquestion() {
@@ -1160,6 +1162,7 @@
           answered_number = 0;
           mondaisu.value = range_end.value - range_start.value + 1;
           old_mondaisu = mondaisu.value;
+          range_select.value = "入力";
           startquestion();
         }
         savedata();
@@ -1181,6 +1184,7 @@
           answered_number = 0;
           mondaisu.value = range_end.value - range_start.value + 1;
           old_mondaisu = mondaisu.value;
+          range_select.value = "入力";
           startquestion();
         }
         savedata();
@@ -1203,6 +1207,7 @@
           next.textContent = "次へ";
           old_option_start = option_start.value;
           answered_number = 0;
+          option_select.value = "入力";
           startquestion();
         }
         savedata();
@@ -1225,6 +1230,7 @@
           next.textContent = "次へ";
           old_option_end = option_end.value;
           answered_number = 0;
+          option_select.value = "入力";
           startquestion();
         }
         savedata();
@@ -1520,13 +1526,9 @@
         } else if (range_select.value === "6/1~") {
           range_start.value = 1809;
           range_end.value = 1902;
-          option_start.value = 1809;
-          option_end.value = 1902;
         } else if (range_select.value === "6/9~") {
           range_start.value = 1903;
           range_end.value = 2000;
-          option_start.value = 1903;
-          option_end.value = 2000;
         }
         next.classList.add("notclick");
         o1.classList.remove("notclick");
@@ -1639,6 +1641,12 @@
           option_end.value = 1400;
         } else if (option_select.value === "ALL") {
           option_start.value = 1;
+          option_end.value = 2000;
+        } else if (option_select.value === "6/1~") {
+          option_start.value = 1809;
+          option_end.value = 1902;
+        } else if (option_select.value === "6/9~") {
+          option_start.value = 1903;
           option_end.value = 2000;
         }
         next.classList.add("notclick");
