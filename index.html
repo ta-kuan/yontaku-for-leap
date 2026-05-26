@@ -722,6 +722,14 @@
         };
         localStorage.setItem("data", JSON.stringify(data));
       }
+      function fontsize(l) {
+        if (l.length < 12) {
+          return "180%";
+        } else if (l.length < 16) {
+          return "160%";
+        } else {
+          return "125%";
+        }
       function setquestion() {
         resultG.classList.add("off");
         question_number = Math.floor(Math.random() * question_words.length);
@@ -903,6 +911,17 @@
             }
             m = 4;
             break;
+        }
+        if (change.classList.contains("switch1")) {
+          o1m.style.fontSize = fontsize(o1text);
+          o2m.style.fontSize = fontsize(o2text);
+          o3m.style.fontSize = fontsize(o3text);
+          o4m.style.fontSize = fontsize(o4text);
+        } else {
+          o1m.style.fontSize = "200%";
+          o2m.style.fontSize = "200%";
+          o3m.style.fontSize = "200%";
+          o4m.style.fontSize = "200%";
         }
         o1m.textContent = o1text;
         o2m.textContent = o2text;
