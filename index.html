@@ -468,8 +468,6 @@
         <div class="rangeset">
           <div class="rangem"></div>
           <select name="menu_input" class="range_select push">
-            <option>1学期末①</option>
-            <option>1学期末②</option>
             <option>7/13~</option>
             <option>8/31~</option>
             <option>ALL</option>
@@ -514,8 +512,6 @@
         <div class="optionset">
           <div class="optionm"></div>
           <select name="menu_input" class="option_select push">
-            <option>1学期末①</option>
-            <option>1学期末②</option>
             <option>7/13~</option>
             <option>8/31~</option>
             <option>ALL</option>
@@ -1533,12 +1529,6 @@
         } else if (range_select.value === "7/13~") {
           range_start.value = 204;
           range_end.value = 301;
-        } else if (range_select.value === "1学期末①") {
-          range_start.value = 1809;
-          range_end.value = 2000;
-        } else if (range_select.value === "1学期末②") {
-          range_start.value = 1;
-          range_end.value = 203;
         }
         option_start.value = range_start.value;
         option_end.value = range_end.value;
@@ -1660,12 +1650,6 @@
         } else if (option_select.value === "7/13~") {
           option_start.value = 204;
           option_end.value = 301;
-        } else if (range_select.value === "1学期末①") {
-          option_start.value = 1809;
-          option_end.value = 2000;
-        } else if (range_select.value === "1学期末②") {
-          option_start.value = 1;
-          option_end.value = 203;
         }
         next.classList.add("notclick");
         o1.classList.remove("notclick");
