@@ -469,6 +469,8 @@
           <div class="rangem"></div>
           <select name="menu_input" class="range_select push">
             <option>7/13~</option>
+            <option>夏課題①</option>
+            <option>夏課題②</option>
             <option>8/31~</option>
             <option>ALL</option>
             <option>P1:Week1</option>
@@ -513,6 +515,8 @@
           <div class="optionm"></div>
           <select name="menu_input" class="option_select push">
             <option>7/13~</option>
+            <option>夏課題①</option>
+            <option>夏課題②</option>
             <option>8/31~</option>
             <option>ALL</option>
             <option>P1:Week1</option>
@@ -1529,6 +1533,12 @@
         } else if (range_select.value === "7/13~") {
           range_start.value = 204;
           range_end.value = 301;
+        } else if (range_select.value === "夏課題①") {
+          range_start.value = 1401;
+          range_end.value = 2000;
+        } else if (range_select.value === "夏課題②") {
+          range_start.value = 1;
+          range_end.value = 301;
         }
         option_start.value = range_start.value;
         option_end.value = range_end.value;
@@ -1649,6 +1659,12 @@
           option_end.value = 400;
         } else if (option_select.value === "7/13~") {
           option_start.value = 204;
+          option_end.value = 301;
+        } else if (range_select.value === "夏課題①") {
+          option_start.value = 1401;
+          option_end.value = 2000;
+        } else if (range_select.value === "夏課題②") {
+          option_start.value = 1;
           option_end.value = 301;
         }
         next.classList.add("notclick");
