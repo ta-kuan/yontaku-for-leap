@@ -1465,7 +1465,7 @@
         startquestion();
       });
       range_select.addEventListener("change", () => {
-        const index = list.findIndex(item => item === range_select.value);
+        const index = list.findIndex(item => item[0] === range_select.value);
         range_start.value = list[index][1];
         range_end.value = list[index][2];
         option_start.value = range_start.value;
@@ -1484,7 +1484,7 @@
         startquestion();
       });
       option_select.addEventListener("change", () => {
-        const index = list.findIndex(item => item === option_select.value);
+        const index = list.findIndex(item => item[0] === option_select.value);
         range_start.value = list[index][1];
         range_end.value = list[index][2];
         next.classList.add("notclick");
