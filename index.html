@@ -654,13 +654,13 @@
       list.forEach(row => {
         const option = document.createElement('option');
         option.textContent = row[0];
-        selectMenu.appendChild(option);
+        selectMenuR.appendChild(option);
       });
       const selectMenuO = document.querySelector('select[name="menu_input"].option_select.push');
       list.forEach(row => {
         const option = document.createElement('option');
         option.textContent = row[0];
-        selectMenu.appendChild(option);
+        selectMenuO.appendChild(option);
       });
       range_select.value = Number(saved.d1) ?? "入力";
       option_select.value = Number(saved.d6) ?? "入力";
