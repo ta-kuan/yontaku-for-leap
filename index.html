@@ -467,14 +467,88 @@
       <div class="menuG slide">
         <div class="rangeset">
           <div class="rangem"></div>
-          <select name="menu_input" class="range_select push"></select>
+          <select name="menu_input" class="range_select push">
+            <option>11/2~</option>
+            <option>11/9~</option>
+            <option>ALL</option>
+            <option>P1:Week1</option>
+            <option>P1:Week2</option>
+            <option>P1:Week3</option>
+            <option>P1:Week4</option>
+            <option>P1:Week5</option>
+            <option>P1:Week6</option>
+            <option>P1:Week7</option>
+            <option>P1:Week8</option>
+            <option>P1:Week9</option>
+            <option>P1:ALL</option>
+            <option>P2:Week1</option>
+            <option>P2:Week2</option>
+            <option>P2:Week3</option>
+            <option>P2:Week4</option>
+            <option>P2:Week5</option>
+            <option>P2:Week6</option>
+            <option>P2:Week7</option>
+            <option>P2:Week8</option>
+            <option>P2:Week9</option>
+            <option>P2:Week10</option>
+            <option>P2:Week11</option>
+            <option>P2:Week12</option>
+            <option>P2:Week13</option>
+            <option>P2:Week14</option>
+            <option>P2:ALL</option>
+            <option>P3:Week1</option>
+            <option>P3:Week2</option>
+            <option>P3:Week3</option>
+            <option>P3:Week4</option>
+            <option>P3:Week5</option>
+            <option>P3:Week6</option>
+            <option>P3:ALL</option>
+            <option>入力</option>
+          </select>
           <input name="menu_input" type="number" class="range_start">
           <input name="menu_input" type="number" class="range_end">
           <span class="bo">〜</span>
         </div>
         <div class="optionset">
           <div class="optionm"></div>
-          <select name="menu_input" class="option_select push"></select>
+          <select name="menu_input" class="option_select push">
+            <option>11/2~</option>
+            <option>11/9~</option>
+            <option>ALL</option>
+            <option>P1:Week1</option>
+            <option>P1:Week2</option>
+            <option>P1:Week3</option>
+            <option>P1:Week4</option>
+            <option>P1:Week5</option>
+            <option>P1:Week6</option>
+            <option>P1:Week7</option>
+            <option>P1:Week8</option>
+            <option>P1:Week9</option>
+            <option>P1:ALL</option>
+            <option>P2:Week1</option>
+            <option>P2:Week2</option>
+            <option>P2:Week3</option>
+            <option>P2:Week4</option>
+            <option>P2:Week5</option>
+            <option>P2:Week6</option>
+            <option>P2:Week7</option>
+            <option>P2:Week8</option>
+            <option>P2:Week9</option>
+            <option>P2:Week10</option>
+            <option>P2:Week11</option>
+            <option>P2:Week12</option>
+            <option>P2:Week13</option>
+            <option>P2:Week14</option>
+            <option>P2:ALL</option>
+            <option>P3:Week1</option>
+            <option>P3:Week2</option>
+            <option>P3:Week3</option>
+            <option>P3:Week4</option>
+            <option>P3:Week5</option>
+            <option>P3:Week6</option>
+            <option>P3:ALL</option>
+            <option>入力</option>
+          </select>
           <input name="menu_input" type="number" class="option_start">
           <input name="menu_input" type="number" class="option_end">
           <span class="bo">〜</span>
@@ -605,41 +679,41 @@
       let seconds = 0;
       let minutes = 0;
       const list = [
-        ["11/2~",800, 902],
-        ["11/9~",903,1000],
-        ["P1:Week1",1, 42],
-        ["P1:Week2",43, 86],
-        ["P1:Week3",87, 133],
-        ["P1:Week4",134, 175],
-        ["P1:Week5",176, 219],
-        ["P1:Week6",220, 263],
-        ["P1:Week7",264, 313],
-        ["P1:Week8",314, 354],
-        ["P1:Week9",355, 400],
-        ["P1:ALL",1, 400],
-        ["P2:Week1",401, 443],
-        ["P2:Week2",444, 490],
-        ["P2:Week3",491, 537],
-        ["P2:Week4",538, 583],
-        ["P2:Week5",584, 626],
-        ["P2:Week6",627, 670],
-        ["P2:Week7",671, 710],
-        ["P2:Week8",711, 755],
-        ["P2:Week9",756, 799],
-        ["P2:Week10",800, 842],
-        ["P2:Week11",843, 881],
-        ["P2:Week12",882, 923],
-        ["P2:Week13",924, 966],
-        ["P2:Week14",967, 1000],
-        ["P2:ALL",401, 1000],
-        ["P3:Week1",1001, 1061],
-        ["P3:Week2",1062, 1130],
-        ["P3:Week3",1131, 1197],
-        ["P3:Week4",1198, 1257],
-        ["P3:Week5",1258, 1330],
-        ["P3:Week6",1331, 1400],
-        ["P3:ALL",1001, 1400],
-        ["ALL",1, 2000]
+        ["P1:Week1", 1, 42],
+        ["P1:Week2", 43, 86],
+        ["P1:Week3", 87, 133],
+        ["P1:Week4", 134, 175],
+        ["P1:Week5", 176, 219],
+        ["P1:Week6", 220, 263],
+        ["P1:Week7", 264, 313],
+        ["P1:Week8", 314, 354],
+        ["P1:Week9", 355, 400],
+        ["P1:ALL", 1, 400],
+        ["P2:Week1", 401, 443],
+        ["P2:Week2", 444, 490],
+        ["P2:Week3", 491, 537],
+        ["P2:Week4", 538, 583],
+        ["P2:Week5", 584, 626],
+        ["P2:Week6", 627, 670],
+        ["P2:Week7", 671, 710],
+        ["P2:Week8", 711, 755],
+        ["P2:Week9", 756, 799],
+        ["P2:Week10", 800, 842],
+        ["P2:Week11", 843, 881],
+        ["P2:Week12", 882, 923],
+        ["P2:Week13", 924, 966],
+        ["P2:Week14", 967, 1000],
+        ["P2:ALL", 401, 1000],
+        ["P3:Week1", 1001, 1061],
+        ["P3:Week2", 1062, 1130],
+        ["P3:Week3", 1131, 1197],
+        ["P3:Week4", 1198, 1257],
+        ["P3:Week5", 1258, 1330],
+        ["P3:Week6", 1331, 1400],
+        ["P3:ALL", 1001, 1400],
+        ["ALL", 1, 2000],
+        ["11/9~", 903, 1000],
+        ["11/2~", 800, 902]
       ];
       function startTimer() {
         startTime = Date.now();
@@ -650,18 +724,9 @@
         seconds = Math.floor(elapsed / 1000);
         minutes = Math.floor(seconds / 60);
       }
-      list.forEach(row => {
-        const option = document.createElement('option');
-        option.textContent = row[0];
-        range_select.appendChild(option);
-      });
-      list.forEach(row => {
-        const option = document.createElement('option');
-        option.textContent = row[0];
-        option_select.appendChild(option);
-      });
-      range_select.value = Number(saved.d1) ?? "入力";
-      option_select.value = Number(saved.d6) ?? "入力";
+      
+      range_select.value = Number(saved.d1) ?? 0;
+      option_select.value = Number(saved.d6) ?? 0;
       range_start.value = Number(saved.d2) || 1;
       old_range_start = Number(saved.d3) || range_start.value;
       range_end.value = Number(saved.d4) || words.length;
@@ -696,7 +761,7 @@
           d13: old_mondaisu,
           d14: change_number
         };
-        localStorage.setItem("data",JSON.stringify(data));
+        localStorage.setItem("data", JSON.stringify(data));
       }
       function fontsize(l) {
         if (l.length < 14) {
@@ -1395,7 +1460,7 @@
         savedata();
         startquestion();
       });
-      range_select.addEventListener("change",() => {
+      range_select.addEventListener("change", () => {
         const index = list.findIndex(item => item[0] === range_select.value);
         range_start.value = list[index][1];
         range_end.value = list[index][2];
@@ -1414,7 +1479,7 @@
         savedata();
         startquestion();
       });
-      option_select.addEventListener("change",() => {
+      option_select.addEventListener("change", () => {
         const index = list.findIndex(item => item[0] === option_select.value);
         range_start.value = list[index][1];
         range_end.value = list[index][2];
