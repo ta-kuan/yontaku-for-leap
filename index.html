@@ -1462,8 +1462,13 @@
       });
       range_select.addEventListener("change", () => {
         const index = list.findIndex(item => item[0] === range_select.value);
-        range_start.value = list[index][1];
-        range_end.value = list[index][2];
+        if (index !== -1 && list[index]) {
+          range_start.value = list[index][1];
+          range_end.value = list[index][2];
+        } else {
+          range_start.value = "";
+          range_end.value = "";
+        }
         option_start.value = range_start.value;
         option_end.value = range_end.value;
         option_select.value = range_select.value;
@@ -1481,8 +1486,13 @@
       });
       option_select.addEventListener("change", () => {
         const index = list.findIndex(item => item[0] === option_select.value);
-        range_start.value = list[index][1];
-        range_end.value = list[index][2];
+        if (index !== -1 && list[index]) {
+          range_start.value = list[index][1];
+          range_end.value = list[index][2];
+        } else {
+          range_start.value = "";
+          range_end.value = "";
+        }
         next.classList.add("notclick");
         o1.classList.remove("notclick");
         o2.classList.remove("notclick");
