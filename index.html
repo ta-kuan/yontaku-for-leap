@@ -650,17 +650,15 @@
         seconds = Math.floor(elapsed / 1000);
         minutes = Math.floor(seconds / 60);
       }
-      const selectMenuR = document.querySelector('select[name="menu_input"].range_select.push');
       list.forEach(row => {
         const option = document.createElement('option');
         option.textContent = row[0];
-        selectMenuR.appendChild(option);
+        range_select.appendChild(option);
       });
-      const selectMenuO = document.querySelector('select[name="menu_input"].option_select.push');
       list.forEach(row => {
         const option = document.createElement('option');
         option.textContent = row[0];
-        selectMenuO.appendChild(option);
+        option_select.appendChild(option);
       });
       range_select.value = Number(saved.d1) ?? "入力";
       option_select.value = Number(saved.d6) ?? "入力";
